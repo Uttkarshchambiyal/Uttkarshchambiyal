@@ -1,5 +1,5 @@
 <!-- 🔹 Typing Animation (TOP) -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=28&duration=3500&pause=800&color=00E7FF&center=true&vCenter=true&width=900&lines=Hey!+I'm+Uttkarsh+Chambiyal+👋;B.Tech+CSE+Student+in+Bangalore+📍;Future+Full+Stack+Developer+🚀;Web+Development+Enthusiast+💻;Always+learning+new+tech+🔥)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=28&duration=3500&pause=800&color=00E7FF&center=true&vCenter=true&width=900&lines=Hey!+I'm+Uttkarsh+Chambiyal+👾)](https://git.io/typing-svg)
 
 <p align="center">
   <img src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" width="220" alt="Coding animation" />
@@ -62,6 +62,19 @@
 
 ---
 
+<h2 align="center">📊 GitHub Stats</h2>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Uttkarshchambiyal&theme=dark&hide_border=true&include_all_commits=true&count_private=false" />
+</p>
+
+<p align="center">
+  <img src="https://nirzak-streak-stats.vercel.app/?user=Uttkarshchambiyal&theme=dark&hide_border=true" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Uttkarshchambiyal&theme=dark&hide_border=true&include_all_commits=true&count_private=false&layout=compact" />
+</p>
 <h2 align="center">🏆 GitHub Trophies</h2>
 
 <p align="center">
