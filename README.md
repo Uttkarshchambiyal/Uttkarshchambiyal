@@ -75,10 +75,11 @@
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Uttkarshchambiyal&theme=dark&hide_border=true&include_all_commits=true&count_private=false&layout=compact" />
 </p>
-<h2 align="center">🏆 GitHub Trophies</h2>
+<h2 align="center">My PortfoliO</h2>
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Uttkarshchambiyal&theme=tokyonight&no-frame=true&no-bg=true&margin-w=6" alt="GitHub trophies" />
+
+  <a> href="https://uttkarshchambiyal.github.io/uttkarsh-portfolio/" alt="potfolio"></a>
 </p>
 
 ---
