@@ -1,3 +1,4 @@
+65
 <!-- 🔹 Typing Animation (TOP) -->
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=28&duration=3500&pause=800&color=00E7FF&center=true&vCenter=true&width=900&lines=Hey!+I'm+Uttkarsh+Chambiyal+👾+....)](https://git.io/typing-svg)
 
@@ -65,9 +66,7 @@
 <h2 align="center">My PortfoliO</h2>
 
 <p align="center">
-
- <a href="https://uttkarshchambiyal.github.io/uttkarsh-portfolio/"><img src="https://img.shields.io/badge/Check%20Out%20My%20Portfolio-FF6B6B.svg?style=for-the-badge&logo=firefox&logoColor=white" alt="portfolio"/></a
-</p>
+<a href="https://uttkarshchambiyal.github.io/uttkarsh-portfolio/"><img src="https://img.shields.io/badge/Check%20Out%20My%20Portfolio-FF6B6B.svg?style=for-the-badge&logo=firefox&logoColor=white" alt="portfolio"/></a></p>
 
 ---
                                                                                                                                                                                                                        >---
