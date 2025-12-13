@@ -75,11 +75,17 @@
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Uttkarshchambiyal&theme=dark&hide_border=true&include_all_commits=true&count_private=false&layout=compact" />
 </p>
+<h2 align="center">📊 GitHub Stats</h2>
+
+
 <h2 align="center">My PortfoliO</h2>
 
 <p align="center">
 
  <a href="https://uttkarshchambiyal.github.io/uttkarsh-portfolio/"><img src="https://img.shields.io/badge/Check%20Out%20My%20Portfolio-FF6B6B.svg?style=for-the-badge&logo=firefox&logoColor=white" alt="portfolio"/></a
+</p>
+
+---
                                                                                                                                                                                                                        >---
 
 <h2 align="center">✍️ Random Dev Quote</h2>
