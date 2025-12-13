@@ -62,22 +62,6 @@
 
 ---
 
-<h2 align="center">📊 GitHub Stats</h2>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Uttkarshchambiyal&theme=dark&hide_border=true&include_all_commits=true&count_private=false" />
-</p>
-
-<p align="center">
-  <img src="https://nirzak-streak-stats.vercel.app/?user=Uttkarshchambiyal&theme=dark&hide_border=true" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Uttkarshchambiyal&theme=dark&hide_border=true&include_all_commits=true&count_private=false&layout=compact" />
-</p>
-<h2 align="center">📊 GitHub Stats</h2>
-
-
 <h2 align="center">My PortfoliO</h2>
 
 <p align="center">
