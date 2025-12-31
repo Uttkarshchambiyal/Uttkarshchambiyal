@@ -1,4 +1,4 @@
-26
+      26
 <!-- 🔹 Typing Animation (TOP) -->
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=28&duration=3500&pause=800&color=00E7FF&center=true&vCenter=true&width=900&lines=Hey!+I'm+Uttkarsh+Chambiyal+👾+....)](https://git.io/typing-svg)
 
@@ -82,9 +82,9 @@
 <h2 align="center">🐍 Contribution Graph Snake </h2>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Uttkarshchambiyal/Uttkarshchambiyal/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Uttkarshchambiyal/Uttkarshchambiyal/output/github-contribution-grid-snake.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Uttkarshchambiyal/Uttkarshchambiyal/output/github-contribution-grid-snake.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Uttkarshchambiyal/Uttkarshchambiyal/dist/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Uttkarshchambiyal/Uttkarshchambiyal/dist/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Uttkarshchambiyal/Uttkarshchambiyal/dist/github-contribution-grid-snake.svg">
 </picture>
 
 ---
