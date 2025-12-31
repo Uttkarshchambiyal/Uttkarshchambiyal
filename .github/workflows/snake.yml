@@ -14,28 +14,20 @@ jobs:
     
     steps:
       - uses: actions/checkout@v3
-      
-      - uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
-      
-      - name: Install dependencies
-        run: pip install requests pillow
+          fetch-depth: 0
       
       - name: Generate snake animation
         uses: Platane/snk@master
         with:
           github_user_name: Uttkarshchambiyal
+          svg_out_size: 440
           outputs: |
-            output/github-contribution-grid-snake.svg
-            output/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
       
-      - name: Push to GitHub
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add output/
-          git commit -m "Update snake animation" --allow-empty
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'Update snake animation'
+          file_pattern: dist/github-contribution-grid-snake*.svg
+          commit_options: '--allow-empty'
