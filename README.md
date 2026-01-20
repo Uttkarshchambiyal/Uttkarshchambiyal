@@ -66,7 +66,7 @@
 <h2 align="center">My PortfoliO</h2>
 
 <p align="center">
-<a href="https://uttkarshchambiyal.github.io/uttkarsh-portfolio/"><img src="https://img.shields.io/badge/Check%20Out%20My%20Portfolio-FF6B6B.svg?style=for-the-badge&logo=firefox&logoColor=white" alt="portfolio"/></a></p>
+<a href="https://www.uttkarshchambiyal.com/"><img src="https://img.shields.io/badge/Check%20Out%20My%20Portfolio-FF6B6B.svg?style=for-the-badge&logo=firefox&logoColor=white" alt="portfolio"/></a></p>
 
 ---
                                                                                                                                                                                                                        >---
