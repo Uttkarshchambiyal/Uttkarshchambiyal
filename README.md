@@ -8,12 +8,7 @@
 
 ---
 
-<svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;">
-  <text x="50%" y="90" text-anchor="middle" font-size="48" font-weight="bold" font-family="Arial" fill="#00e7ff">🚀 About Me
-    <animate attributeName="fill" values="#00e7ff;#ff006e;#00e7ff" dur="3s" repeatCount="indefinite" />
-  </text>
-</svg>
-
+<h1 align="center">✨ 🚀 About Me 🚀 ✨</h1>
 <p align="center">
   👋 Hey! I’m <b>Uttkarsh</b> <br/>
   🎓 <b>B.Tech CSE (1st Semester)</b> — based in <b>Bangalore</b> <br/>
