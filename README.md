@@ -8,8 +8,7 @@
 
 ---
 
-<h1 align="center">✨ 🚀 About Me 🚀 ✨</h1>
-<p align="center">
+<h1 align="center">═══════════════════════════════════<br/>🚀 ABOUT ME 🚀<br/>═══════════════════════════════════</h1><p align="center">
   👋 Hey! I’m <b>Uttkarsh</b> <br/>
   🎓 <b>B.Tech CSE (1st Semester)</b> — based in <b>Bangalore</b> <br/>
   💻 Passionate about <b>Web Development, Tech Trends & Content Creation</b> <br/>
