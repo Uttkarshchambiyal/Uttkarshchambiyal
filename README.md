@@ -8,13 +8,11 @@
 
 ---
 
-<svg viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg" style="width:100%; margin: 20px 0;">
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="1.5s" begin="0s" fill="freeze" />
-    <text x="50%" y="60" text-anchor="middle" font-size="32" fill="#00e7ff" font-weight="bold" font-family="Arial">✨ About Me ✨</text>
-  </g>
+<svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;">
+  <text x="50%" y="90" text-anchor="middle" font-size="48" font-weight="bold" font-family="Arial" fill="#00e7ff">🚀 About Me
+    <animate attributeName="fill" values="#00e7ff;#ff006e;#00e7ff" dur="3s" repeatCount="indefinite" />
+  </text>
 </svg>
-<h1 align="center">💫 About Me</h1>
 
 <p align="center">
   👋 Hey! I’m <b>Uttkarsh</b> <br/>
