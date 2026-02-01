@@ -1,3 +1,18 @@
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    animation: fadeIn 1.5s ease-in;
+  }
+</style>
+
       26
 <!-- 🔹 Typing Animation (TOP) -->
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=28&duration=3500&pause=800&color=00E7FF&center=true&vCenter=true&width=900&lines=Hey!+I'm+Uttkarsh+Chambiyal+👾+....)](https://git.io/typing-svg)
@@ -8,6 +23,7 @@
 
 ---
 
+<div class="fade-in">
 <h1 align="center">💫 About Me</h1>
 
 <p align="center">
@@ -18,6 +34,7 @@
   🚀 Currently focused on <b>HTML, CSS, JavaScript & C/C++</b> <br/>
   🎯 Aim: Build <b>clean, responsive & user-friendly</b> digital experiences
 </p>
+</div>
 
 ---
 
