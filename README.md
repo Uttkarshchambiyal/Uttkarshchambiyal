@@ -28,7 +28,7 @@
 ```javascript
 const uttkarsh = {
   name        : "Uttkarsh Chambiyal",
-  degree      : "B.Tech CSE, Sem 2 @ Galgotias University",
+  degree      : "B.Tech CSE, Sem 2",
   location    : "Bengaluru, Karnataka 🇮🇳",
   stack       : ["HTML", "CSS", "JavaScript", "Java", "C", "C++"],
   currentlyOn : "Building projects & grinding LeetCode daily",
@@ -36,7 +36,6 @@ const uttkarsh = {
   hobbies     : ["Coding 💻", "Video Editing 🎬"],
   goal        : "Build cool things that actually matter",
   funFact     : "I debug faster after midnight 🌙"
-};
 ```
 
 ---
