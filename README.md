@@ -1,104 +1,158 @@
-<!-- Typing Animation -->
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=30&duration=3000&pause=800&color=00E7FF&center=true&vCenter=true&width=900&lines=Hey!+I'm+Uttkarsh+Chambiyal+👾;Full-Stack+Developer+in+the+Making+🚀;MERN+Stack+%7C+DSA+%7C+Competitive+Coding+💻;Building+Cool+Stuff+%2C+One+Commit+at+a+Time+⚡)](https://git.io/typing-svg)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Uttkarsh%20Chambiyal&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Full-Stack%20Dev%20%7C%20DSA%20Grinder%20%7C%20F1%20Fan%20%F0%9F%8F%8E%EF%B8%8F&descAlignY=55&descSize=16" width="100%" />
+
+</div>
+
+<div align="center">
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2500&pause=600&color=00E7FF&center=true&vCenter=true&random=true&width=800&lines=%F0%9F%91%BE+Hey%2C+I'm+Uttkarsh+Chambiyal!;%F0%9F%9A%80+MERN+Stack+%7C+DSA+%7C+Competitive+Coding;%F0%9F%94%A5+318+Commits+%26+Still+Grinding...;%E2%9A%A1+Building+Real-World+Projects+Daily;%F0%9F%8F%8E%EF%B8%8F+F1+Fan+%7C+%F0%9F%8E%AC+Video+Editor+%7C+%F0%9F%92%BB+Dev;%F0%9F%8E%AF+2026+SWE+%E2%80%94+Watch+Me.)](https://git.io/typing-svg)
 
 </div>
 
 ---
 
 <div align="center">
-<img src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" width="200" alt="Coding" />
+
+![](https://img.shields.io/badge/Focus-MERN%20Stack-00E7FF?style=for-the-badge&logoColor=white)
+![](https://img.shields.io/badge/Semester-2%20%40%20Galgotias-blueviolet?style=for-the-badge)
+![](https://img.shields.io/badge/Location-Bengaluru%20%F0%9F%87%AE%F0%9F%87%B3-orange?style=for-the-badge)
+![](https://img.shields.io/badge/Status-Grinding%20Daily-%23FF4500?style=for-the-badge)
+
 </div>
 
 ---
 
-## <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"> About Me
+## ⚡ Who Am I?
 
-```yaml
-Name      : Uttkarsh Chambiyal
-Degree    : B.Tech CSE — Semester 2 @ Galgotias University
-Location  : Bengaluru, Karnataka 🇮🇳
-Focus     : Full-Stack Dev (MERN) | DSA | Competitive Programming
-Currently : Building portfolio projects & grinding LeetCode
-Goal      : Land a SWE role & grow as a full-stack developer
-Hobbies   : Coding 💻 | F1 Racing 🏎️ | Video Editing 🎬 | Content Creation
+```javascript
+const uttkarsh = {
+  name        : "Uttkarsh Chambiyal",
+  degree      : "B.Tech CSE, Sem 2 @ Galgotias University",
+  location    : "Bengaluru, Karnataka 🇮🇳",
+  stack       : ["MERN", "C++", "Java", "Python"],
+  currentlyOn : "Building portfolio projects & grinding LeetCode",
+  learning    : ["System Design", "DSA", "AI/ML", "Web3 basics"],
+  hobbies     : ["Coding 💻", "F1 Racing 🏎️", "Video Editing 🎬", "Content Creation 🎙️"],
+  goal        : "Land a SWE role & build cool things that matter",
+  funFact     : "I debug faster after midnight 🌙"
+};
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## 🔥 Tech Stack
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=c,cpp,java,python,js,html,css,react,nodejs,express,mongodb,git,github,vscode,figma&perline=8" alt="Tech Stack" />
-</p>
+<div align="center">
+
+**Languages**
+
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+
+**Frontend**
+
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+
+**Backend & DB**
+
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+
+**Tools**
+
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+
+</div>
 
 ---
 
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Uttkarshchambiyal&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" height="165" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Uttkarshchambiyal&layout=compact&theme=tokyonight&hide_border=true" height="165" alt="Top Languages" />
+  <img src="https://github-readme-stats.vercel.app/api?username=Uttkarshchambiyal&show_icons=true&theme=radical&hide_border=true&count_private=true&bg_color=0d1117&title_color=00E7FF&icon_color=FF6EC7&text_color=ffffff" height="170" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Uttkarshchambiyal&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=00E7FF&text_color=ffffff" height="170" />
 </div>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Uttkarshchambiyal&theme=tokyonight&hide_border=true" alt="GitHub Streak" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Uttkarshchambiyal&theme=radical&hide_border=true&background=0d1117&ring=00E7FF&fire=FF6EC7&currStreakLabel=00E7FF" width="49%" />
 </div>
 
 ---
 
-## 🏆 GitHub Trophies
+## 🏆 Trophy Cabinet
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Uttkarshchambiyal&theme=tokyonight&no-frame=true&row=1&column=6" alt="Trophies" />
+  <img src="https://github-profile-trophy.vercel.app/?username=Uttkarshchambiyal&theme=radical&no-frame=true&no-bg=true&row=1&column=7" />
 </div>
 
 ---
 
-## 🚀 What I'm Working On
+## 📈 Contribution Activity
 
-- 🔭 Building full-stack **MERN** projects for my portfolio
-- 🧠 Grinding **DSA** & Competitive Programming daily
-- 🌱 Learning **System Design** & backend architecture
-- 🤖 Experimenting with **AI/ML** tools & automation workflows
-- 🎯 Targeting **hackathons** and open-source contributions
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Uttkarshchambiyal&bg_color=0d1117&color=00E7FF&line=FF6EC7&point=ffffff&area=true&hide_border=true" width="100%" />
+</div>
+
+---
+
+## 🎯 Currently Grinding
+
+```
+🔭  Building full-stack MERN projects for portfolio
+🧠  DSA & Competitive Programming — daily grind
+🌱  System Design & backend architecture
+🤖  AI/ML tools & n8n automation workflows
+🎯  Hackathons + open-source contributions
+💼  Freelance: Web Dev | Video Editing | Graphic Design
+```
 
 ---
 
 ## 🌐 Connect With Me
 
-<p align="center">
-  <a href="https://www.linkedin.com/in/uttkarsh-chambiyal-3495a8380/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-  </a>
-  <a href="mailto:uttkarshchambiyal26@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
-  </a>
-  <a href="https://www.uttkarshchambiyal.com/">
-    <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
-  </a>
-</p>
-
----
-
-## ✍️ Dev Quote of the Day
-
 <div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev Quote" />
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uttkarsh-chambiyal-3495a8380/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:uttkarshchambiyal26@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-%23000000?style=for-the-badge&logo=vercel&logoColor=white)](https://www.uttkarshchambiyal.com/)
+
 </div>
 
 ---
 
-## 🐍 Contribution Graph
+## ✍️ Random Dev Quote
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/UttkarshChambiyal/UttkarshChambiyal/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" />
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical" />
+</div>
+
+---
+
+## 🐍 Contribution Snake
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/UttkarshChambiyal/UttkarshChambiyal/output/github-contribution-grid-snake-dark.svg" />
 </div>
 
 ---
 
 <div align="center">
-  <img src="https://komarev.com/ghpvc/?username=Uttkarshchambiyal&label=Profile+Views&color=00e7ff&style=flat" alt="Profile Views" />
-  <p>⭐ <em>If you like my work, drop a star on my repos — it means a lot!</em> ⭐</p>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&animation=twinkling" width="100%" />
+
+![](https://komarev.com/ghpvc/?username=Uttkarshchambiyal&label=Profile+Views&color=00E7FF&style=flat-square)
+
+**⚡ Turning coffee into code, one commit at a time ⚡**
+
 </div>
