@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Uttkarsh%20Chambiyal&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Full-Stack%20Dev%20%7C%20DSA%20Grinder%20%7C%20Content%20Creator&descAlignY=55&descSize=16" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Uttkarsh%20Chambiyal&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Aspiring%20Dev%20%7C%20DSA%20Grinder%20%7C%20Problem%20Solver&descAlignY=55&descSize=16" width="100%" />
 
 </div>
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2500&pause=600&color=00E7FF&center=true&vCenter=true&random=true&width=800&lines=%F0%9F%91%BE+Hey%2C+I'm+Uttkarsh+Chambiyal!;%F0%9F%9A%80+MERN+Stack+%7C+DSA+%7C+Competitive+Coding;%F0%9F%94%A5+318+Commits+%26+Still+Grinding...;%E2%9A%A1+Building+Real-World+Projects+Daily;%F0%9F%8E%AC+Video+Editor+%7C+%F0%9F%92%BB+Developer+%7C+%F0%9F%8C%9F+Creator)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2500&pause=600&color=00E7FF&center=true&vCenter=true&random=true&width=800&lines=%F0%9F%91%BE+Hey%2C+I'm+Uttkarsh+Chambiyal!;%F0%9F%9A%80+MERN+Stack+%7C+DSA+%7C+Competitive+Coding;%F0%9F%94%A5+318+Contributions+%26+Still+Going...;%E2%9A%A1+Building+Real-World+Projects+Daily;%F0%9F%92%BB+Developer+in+the+Making+%F0%9F%8C%B1)](https://git.io/typing-svg)
 
 </div>
 
@@ -31,9 +31,9 @@ const uttkarsh = {
   degree      : "B.Tech CSE, Sem 2 @ Galgotias University",
   location    : "Bengaluru, Karnataka 🇮🇳",
   stack       : ["HTML", "CSS", "JavaScript", "Java", "C", "C++"],
-  currentlyOn : "Building portfolio projects & grinding LeetCode",
+  currentlyOn : "Building projects & grinding LeetCode daily",
   learning    : ["MERN Stack", "DSA", "System Design", "AI/ML"],
-  hobbies     : ["Coding 💻", "Video Editing 🎬", "Content Creation 🎙️"],
+  hobbies     : ["Coding 💻", "Video Editing 🎬"],
   goal        : "Build cool things that actually matter",
   funFact     : "I debug faster after midnight 🌙"
 };
