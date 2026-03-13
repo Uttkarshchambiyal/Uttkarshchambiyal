@@ -6,7 +6,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2500&pause=600&color=00E7FF&center=true&vCenter=true&random=true&width=800&lines=%F0%9F%91%BE+Hey%2C+I'm+Uttkarsh+Chambiyal!;%F0%9F%9A%80+MERN+Stack+%7C+DSA+%7C+Competitive+Coding;%F0%9F%94%A5+318+Contributions+%26+Still+Going...;%E2%9A%A1+Building+Real-World+Projects+Daily;%F0%9F%92%BB+Developer+in+the+Making+%F0%9F%8C%B1)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2500&pause=600&color=00E7FF&center=true&vCenter=true&random=true&width=800&lines=%F0%9F%91%BE+Hey%2C+I'm+Uttkarsh+Chambiyal!;%F0%9F%9A%80+MERN+Stack+%7C+DSA+%7C+Competitive+Coding;%F0%9F%92%A1+Code.+Debug.+Repeat.;%E2%9A%A1+Building+Real-World+Projects+Daily;%F0%9F%92%BB+Developer+in+the+Making+%F0%9F%8C%B1)](https://git.io/typing-svg)
 
 </div>
 
