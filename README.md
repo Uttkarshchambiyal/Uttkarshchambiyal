@@ -15,7 +15,7 @@
 <div align="center">
 
 ![](https://img.shields.io/badge/Focus-MERN%20Stack-00E7FF?style=for-the-badge&logoColor=white)
-![](https://img.shields.io/badge/Semester-2%20%40%20Galgotias-blueviolet?style=for-the-badge)
+![](https://img.shields.io/badge/Semester-2%20%40%20-blueviolet?style=for-the-badge)
 ![](https://img.shields.io/badge/Location-Bengaluru%20%F0%9F%87%AE%F0%9F%87%B3-orange?style=for-the-badge)
 ![](https://img.shields.io/badge/Status-Grinding%20Daily-%23FF4500?style=for-the-badge)
 
