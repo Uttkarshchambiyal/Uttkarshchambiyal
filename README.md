@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Uttkarsh%20Chambiyal&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Aspiring%20Dev%20%7C%20DSA%20Grinder%20%7C%20Problem%20Solver&descAlignY=55&descSize=16" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,4,30&height=180&section=header&text=Uttkarsh%20Chambiyal&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Aspiring%20Dev%20%7C%20DSA%20Grinder%20%7C%20Problem%20Solver&descAlignY=55&descSize=16" width="100%" />
 
 </div>
 
@@ -123,7 +123,7 @@ const uttkarsh = {
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&animation=twinkling" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,4,30&height=120&section=footer&animation=twinkling" width="100%" />
 
 ![](https://komarev.com/ghpvc/?username=Uttkarshchambiyal&label=Profile+Views&color=00E7FF&style=flat-square)
 
