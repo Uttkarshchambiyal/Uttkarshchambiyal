@@ -6,7 +6,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2500&pause=600&color=00E7FF&center=true&vCenter=true&random=true&width=800&lines=%F0%9F%91%BE+Hey%2C+I'm+Uttkarsh+Chambiyal!;%F0%9F%9A%80+MERN+Stack+%7C+DSA+%7C+Competitive+Coding;%F0%9F%92%A1+Code.+Debug.+Repeat.;%E2%9A%A1+Building+Real-World+Projects+Daily;%F0%9F%92%BB+Developer+in+the+Making+%F0%9F%8C%B1)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&duration=2500&pause=600&color=6B21A8&center=true&vCenter=true&random=true&width=800&lines=%F0%9F%91%BE+Hey%2C+I'm+Uttkarsh+Chambiyal!;%F0%9F%9A%80+MERN+Stack+%7C+DSA+%7C+Competitive+Coding;%F0%9F%92%A1+Code.+Debug.+Repeat.;%E2%9A%A1+Building+Real-World+Projects+Daily;%F0%9F%92%BB+Developer+in+the+Making+%F0%9F%8C%B1)](https://git.io/typing-svg)
 
 </div>
 
@@ -69,13 +69,13 @@ const uttkarsh = {
 
 <div align="center">
 
-![](https://img.shields.io/github/followers/Uttkarshchambiyal?label=Followers&style=for-the-badge&color=00E7FF&labelColor=0d1117)
+![](https://img.shields.io/github/followers/Uttkarshchambiyal?label=Followers&style=for-the-badge&color=6B21A8&labelColor=0d1117)
 ![](https://img.shields.io/github/stars/Uttkarshchambiyal?label=Total%20Stars&style=for-the-badge&color=FF6EC7&labelColor=0d1117&affiliations=OWNER)
 
 </div>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Uttkarshchambiyal&layout=donut&theme=radical&hide_border=true&bg_color=0d1117&title_color=00E7FF&text_color=ffffff&langs_count=6" height="220" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Uttkarshchambiyal&layout=donut&theme=radical&hide_border=true&bg_color=0d1117&title_color=6B21A8&text_color=ffffff&langs_count=6" height="220" />
 </div>
 
 ---
@@ -83,7 +83,7 @@ const uttkarsh = {
 ## 📈 Contribution Activity
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Uttkarshchambiyal&bg_color=0d1117&color=00E7FF&line=FF6EC7&point=ffffff&area=true&hide_border=true" width="100%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Uttkarshchambiyal&bg_color=0d1117&color=6B21A8&line=FF6EC7&point=ffffff&area=true&hide_border=true" width="100%" />
 </div>
 
 ---
@@ -125,7 +125,7 @@ const uttkarsh = {
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,4,30&height=120&section=footer&animation=twinkling" width="100%" />
 
-![](https://komarev.com/ghpvc/?username=Uttkarshchambiyal&label=Profile+Views&color=00E7FF&style=flat-square)
+![](https://komarev.com/ghpvc/?username=Uttkarshchambiyal&label=Profile+Views&color=6B21A8&style=flat-square)
 
 **⚡ Turning coffee into code, one commit at a time ⚡**
 
