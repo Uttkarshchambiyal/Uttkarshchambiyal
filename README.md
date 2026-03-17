@@ -1,193 +1,234 @@
-<!-- HEADER BANNER -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,20,24&height=220&section=header&text=Uttkarsh%20Chambiyal&fontSize=52&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=Full-Stack%20Dev%20%E2%80%A2%20DSA%20Grinder%20%E2%80%A2%20Problem%20Solver&descAlignY=58&descSize=18&stroke=C77DFF&strokeWidth=2" width="100%" />
-</div>
-
-<!-- ANIMATED TYPING -->
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=24&duration=2000&pause=800&color=C77DFF&center=true&vCenter=true&random=true&width=850&height=50&lines=%F0%9F%91%BE+Hey%2C+I'm+Uttkarsh+Chambiyal!;%F0%9F%9A%80+MERN+Stack+%7C+DSA+%7C+Competitive+Coding;%F0%9F%94%A5+Building+Real-World+Projects+Daily;%E2%9A%A1+Full+Stack+Dev+in+Progress...;%F0%9F%8E%AF+Next+Stop%3A+SWE+at+a+Top+Tech+Co.;%F0%9F%92%A1+I+don't+stop+when+I'm+tired%2C+I+stop+when+I'm+done)](https://git.io/typing-svg)
+<!-- ANIMATED HEADER -->
+<img src="https://capsule-render.vercel.app/api?type=cylinder&color=gradient&customColorList=6,11,20&height=200&section=header&text=Uttkarsh%20Chambiyal&fontSize=50&fontColor=fff&animation=fadeIn&fontAlignY=45&desc=%E2%9A%A1%20Full-Stack%20Dev%20%7C%20DSA%20Grinder%20%7C%20Code%20Obsessed&descAlignY=65&descSize=17" width="100%" />
 
 </div>
 
-<!-- PROFILE VIEWS + SOCIAL BADGES -->
+<!-- TYPING ANIMATION -->
 <div align="center">
 
-![Profile Views](https://komarev.com/ghpvc/?username=Uttkarshchambiyal&label=Profile+Views&color=C77DFF&style=for-the-badge)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=800&size=22&duration=2200&pause=900&color=C77DFF&center=true&vCenter=true&random=true&width=900&height=55&lines=%F0%9F%91%BE+Hey%2C+I%27m+Uttkarsh+Chambiyal!;%F0%9F%9A%80+MERN+Stack+Developer+in+the+Making;%F0%9F%94%A5+DSA+%7C+Competitive+Coding+%7C+Daily+Grind;%E2%9A%A1+Building+Projects+That+Actually+Ship;%F0%9F%8E%AF+B.Tech+CSE+%E2%80%A2+Bengaluru+%F0%9F%87%AE%F0%9F%87%B3;%F0%9F%92%A1+I+don%27t+stop+when+I%27m+tired...+I+stop+when+done;%F0%9F%8F%8E%EF%B8%8F+F1+fan+%7C+Code+by+day+%7C+Debug+by+night)](https://git.io/typing-svg)
+
+</div>
+
+---
+
+<!-- QUICK STATS ROW -->
+<div align="center">
+
+![Profile Views](https://komarev.com/ghpvc/?username=Uttkarshchambiyal&label=Profile%20Views&color=C77DFF&style=for-the-badge)
+&nbsp;
 [![GitHub followers](https://img.shields.io/github/followers/Uttkarshchambiyal?label=Followers&style=for-the-badge&color=FF6EC7&labelColor=0d1117&logo=github)](https://github.com/Uttkarshchambiyal)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uttkarsh-chambiyal-3495a8380/)
-[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-FF6EC7?style=for-the-badge&logo=vercel&logoColor=white)](https://www.uttkarshchambiyal.com/)
+&nbsp;
+[![GitHub stars](https://img.shields.io/github/stars/Uttkarshchambiyal?label=Total%20Stars&style=for-the-badge&color=FFD700&labelColor=0d1117&logo=github&affiliations=OWNER)](https://github.com/Uttkarshchambiyal)
 
 </div>
 
 ---
 
-<!-- SNAKE CONTRIBUTION GRAPH -->
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%" alt="snake animation" />
-</div>
+<!-- ABOUT ME - SPLIT LAYOUT -->
+## <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="28"> &nbsp;About Me
 
----
+<table>
+<tr>
+<td width="55%">
 
-<!-- ABOUT ME SECTION -->
-## <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30px"/> &nbsp;Who Am I?
-
-<img align="right" alt="Coding GIF" src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="320px" />
-
-```javascript
-const uttkarsh = {
+```typescript
+const uttkarsh: Developer = {
   name     : "Uttkarsh Chambiyal",
-  degree   : "B.Tech CSE, Sem 2",
-  location : "Bengaluru, Karnataka 🇮🇳",
-  stack    : ["HTML", "CSS", "JS", "React",
-              "Node.js", "MongoDB", "Java", "C++"],
-  current  : "Building MERN projects + DSA grind",
-  learning : ["MERN Stack", "DSA", "System Design",
-              "AI/ML", "Web3 Basics"],
-  hobbies  : ["Coding 💻", "Video Editing 🎬",
-              "Watching F1 🏎️"],
-  goal     : "Build cool things that actually matter",
+  role     : "Full-Stack Developer",
+  degree   : "B.Tech CSE  •  Sem 2",
+  location : "Bengaluru, India 🇮🇳",
+
+  currently: [
+    "🔧 Building MERN stack projects",
+    "🧠 Grinding DSA every single day",
+    "🌱 Learning System Design",
+    "🤖 Exploring AI/ML & Automation",
+  ],
+
+  stack: {
+    frontend : ["React", "HTML", "CSS", "Tailwind"],
+    backend  : ["Node.js", "Express", "MongoDB"],
+    languages: ["JavaScript", "Java", "C++", "Python"],
+    tools    : ["Git", "VS Code", "Figma", "Postman"],
+  },
+
   funFact  : "I debug faster after midnight 🌙",
   openTo   : ["Internships", "Hackathons",
-              "Freelance", "Open Source"]
+              "Open Source", "Freelance"],
 };
 ```
 
-<br clear="right"/>
+</td>
+<td width="45%" align="center">
+
+<img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="300" alt="coding" />
+
+<br />
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uttkarsh-chambiyal-3495a8380/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF6EC7?style=for-the-badge&logo=vercel&logoColor=white)](https://www.uttkarshchambiyal.com/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:uttkarshchambiyal26@gmail.com)
+
+</td>
+</tr>
+</table>
 
 ---
 
-<!-- STATS SECTION -->
+<!-- SKILL ICONS - THE MAIN ATTRACTION -->
+## 🔥 Tech Arsenal
+
+<div align="center">
+
+### Languages
+[![My Skills](https://skillicons.dev/icons?i=js,ts,java,cpp,c,python,html,css&theme=dark&perline=8)](https://skillicons.dev)
+
+### Frontend
+[![My Skills](https://skillicons.dev/icons?i=react,tailwind,vite,figma&theme=dark&perline=8)](https://skillicons.dev)
+
+### Backend & Database
+[![My Skills](https://skillicons.dev/icons?i=nodejs,express,mongodb,mysql&theme=dark&perline=8)](https://skillicons.dev)
+
+### Tools & Platforms
+[![My Skills](https://skillicons.dev/icons?i=git,github,vscode,vercel,postman,linux&theme=dark&perline=8)](https://skillicons.dev)
+
+</div>
+
+---
+
+<!-- GITHUB STATS - 3 COLUMN -->
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Uttkarshchambiyal&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=C77DFF&icon_color=FF6EC7&text_color=ffffff&ring_color=C77DFF" height="180" />
+
+<a href="https://github.com/Uttkarshchambiyal">
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Uttkarshchambiyal&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=C77DFF&icon_color=FF6EC7&text_color=c9d1d9&ring_color=C77DFF" />
   &nbsp;
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Uttkarshchambiyal&theme=tokyonight&hide_border=true&background=0d1117&ring=C77DFF&fire=FF6EC7&currStreakLabel=C77DFF&sideLabels=C77DFF&sideNums=ffffff&dates=888888" height="180" />
+  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=Uttkarshchambiyal&theme=tokyonight&hide_border=true&background=0d1117&ring=C77DFF&fire=FF6EC7&currStreakLabel=C77DFF&sideLabels=C77DFF&sideNums=c9d1d9&dates=888888&stroke=C77DFF" />
+</a>
+
 </div>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Uttkarshchambiyal&layout=donut-vertical&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=C77DFF&text_color=ffffff&langs_count=8" height="280" />
+
+<a href="https://github.com/Uttkarshchambiyal">
+  <img height="200em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Uttkarshchambiyal&layout=donut-vertical&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=C77DFF&text_color=c9d1d9&langs_count=8" />
+</a>
+
 </div>
 
 ---
 
-<!-- TECH STACK -->
-## 🔥 Tech Stack
+<!-- TROPHIES -->
+## 🏆 Trophies
 
 <div align="center">
 
-**Languages**
-
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
-**Frontend**
-
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-
-**Backend & DB**
-
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-
-**Tools & Platforms**
-
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+<img src="https://github-profile-trophy.vercel.app/?username=Uttkarshchambiyal&theme=tokyonight&no-frame=true&no-bg=true&margin-w=6&row=1&column=7" width="100%" />
 
 </div>
 
 ---
 
 <!-- CONTRIBUTION GRAPH -->
-## 📈 Contribution Activity
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Uttkarshchambiyal&bg_color=0d1117&color=C77DFF&line=FF6EC7&point=C77DFF&area=true&hide_border=true&area_color=C77DFF" width="100%" />
-</div>
-
----
-
-<!-- TROPHIES -->
-## 🏆 GitHub Trophies
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Uttkarshchambiyal&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=7" width="100%" />
-</div>
-
----
-
-<!-- CURRENTLY GRINDING -->
-## 🎯 Currently Grinding
+## 📈 Contribution Graph
 
 <div align="center">
 
-| 🔭 | Building full-stack MERN projects for portfolio |
-|---|---|
-| 🧠 | DSA & Competitive Programming — daily grind |
-| 🌱 | System Design & backend architecture |
-| 🤖 | Experimenting with AI/ML tools & automation |
-| 🎯 | Hackathons + open-source contributions |
-| 💼 | Freelance: Web Dev · Video Editing · Graphic Design |
-| 🏎️ | Watching F1 to stay sane between commits |
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Uttkarshchambiyal&bg_color=0d1117&color=C77DFF&line=FF6EC7&point=ffffff&area=true&hide_border=true&area_color=20023a&custom_title=Uttkarsh%27s%20Contribution%20Graph" width="100%" />
 
 </div>
 
 ---
 
-<!-- COMPETITIVE PROGRAMMING -->
+<!-- SNAKE ANIMATION -->
+## 🐍 Contribution Snake
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%" />
+
+</div>
+
+---
+
+<!-- WHAT I'M GRINDING -->
+## 🎯 What I'm Grinding
+
+<div align="center">
+
+| Area | Status | Details |
+|:----:|:------:|:-------:|
+| 🔧 MERN Stack | `ACTIVE` | Building full-stack apps daily |
+| 🧠 DSA & Algo | `ACTIVE` | LeetCode grind — every day |
+| 🏗️ System Design | `LEARNING` | Fundamentals + architecture |
+| 🤖 AI / ML | `EXPLORING` | Tools, APIs, automation flows |
+| 🎯 Competitive CP | `GRINDING` | Codeforces + LeetCode weekly |
+| 💼 Freelance | `OPEN` | Web Dev + Video + Design |
+
+</div>
+
+---
+
+<!-- COMPETITIVE CODING -->
 ## ⚔️ Competitive Programming
 
 <div align="center">
 
 [![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/Uttkarshchambiyal/)
-[![GeeksForGeeks](https://img.shields.io/badge/GeeksforGeeks-298D46?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://auth.geeksforgeeks.org/user/uttkarshchambiyal/)
+&nbsp;
+[![GeeksForGeeks](https://img.shields.io/badge/GeeksForGeeks-298D46?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://auth.geeksforgeeks.org/user/uttkarshchambiyal/)
+&nbsp;
 [![Codeforces](https://img.shields.io/badge/Codeforces-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white)](https://codeforces.com/)
 
 </div>
 
 ---
 
-<!-- CONNECT SECTION -->
-## 🌐 Connect With Me
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uttkarsh-chambiyal-3495a8380/)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:uttkarshchambiyal26@gmail.com)
-[![Portfolio](https://img.shields.io/badge/Portfolio-%23000000?style=for-the-badge&logo=vercel&logoColor=white)](https://www.uttkarshchambiyal.com/)
-[![Twitter/X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/uttkarshx26)
-
-</div>
-
----
-
 <!-- DEV QUOTE -->
-## ✍️ Dev Quote of the Day
+## ✍️ Dev Quote
 
 <div align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
+
+<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="80%" />
+
 </div>
 
 ---
 
-<!-- FOOTER WAVE -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,20,24&height=130&section=footer&animation=twinkling&stroke=C77DFF&strokeWidth=1" width="100%" />
+<!-- CONNECT -->
+## 🌐 Let's Connect
 
-  <sub>⚡ <b>Turning caffeine into code, one commit at a time</b> ⚡</sub>
+<div align="center">
+
+<a href="https://www.linkedin.com/in/uttkarsh-chambiyal-3495a8380/">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+&nbsp;
+<a href="mailto:uttkarshchambiyal26@gmail.com">
+  <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+</a>
+&nbsp;
+<a href="https://www.uttkarshchambiyal.com/">
+  <img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white" />
+</a>
+&nbsp;
+<a href="https://twitter.com/uttkarshx26">
+  <img src="https://img.shields.io/badge/X%20(Twitter)-000000?style=for-the-badge&logo=x&logoColor=white" />
+</a>
+
+</div>
+
+---
+
+<!-- FOOTER -->
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=140&section=footer&animation=twinkling" width="100%" />
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=3000&pause=1000&color=C77DFF&center=true&vCenter=true&width=600&lines=%E2%9A%A1+Turning+caffeine+into+code%2C+one+commit+at+a+time+%E2%9A%A1" />
 
 </div>
