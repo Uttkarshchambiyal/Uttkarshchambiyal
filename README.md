@@ -6,67 +6,69 @@
   <img src="https://github.com/Tarikul-Islam-Anik/tarikul-islam-anik/blob/main/assets/images/Waving%20Hand%20Medium-Light%20Skin%20Tone.png" width="80px" />
 </h1>
 
-<!-- TYPING - I AM -->
+<!-- TYPING - NAME -->
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Comfortaa&weight=700&size=40&duration=2000&pause=1000&color=C77DFF&center=true&vCenter=true&width=600&height=80&lines=I+am+Uttkarsh+Chambiyal)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Comfortaa&weight=700&size=40&duration=2000&pause=1000&color=C77DFF&center=true&vCenter=true&width=650&height=80&lines=I+am+Uttkarsh+Chambiyal)](https://git.io/typing-svg)
 
 </div>
 
 <!-- TYPING - ROLES -->
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Comfortaa&size=22&duration=2500&pause=800&color=00D9FF&center=true&vCenter=true&width=700&height=50&lines=Full-Stack+Developer+%F0%9F%9A%80;DSA+Grinder+%7C+Competitive+Coder+%E2%9A%A1;MERN+Stack+%7C+B.Tech+CSE+%40+Sem+2;Open+Source+%7C+Hackathons+%7C+Freelance)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Comfortaa&size=20&duration=2500&pause=900&color=00D9FF&center=true&vCenter=true&width=700&height=50&lines=B.Tech+CSE+Student+%7C+Semester+2;Frontend+Developer+%7C+DSA+Practitioner;Problem+Solver+%7C+Open+to+Internships+%26+Hackathons)](https://git.io/typing-svg)
 
 </div>
 
 <br/>
 
-<!-- TAGLINE -->
 <h3 align="center">
-A Passionate Full-Stack Developer and Problem Solver
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" alt="Fire" width="25" height="25" />
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="25" height="25" />
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Medium-Light%20Skin%20Tone.png" alt="Dev" width="25" height="25" />
+A Passionate Developer and Problem Solver
+&nbsp;<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" alt="Fire" width="25" height="25" />
+&nbsp;<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="25" height="25" />
+&nbsp;<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Medium-Light%20Skin%20Tone.png" alt="Dev" width="25" height="25" />
 </h3>
 
 <br/>
 
 ---
 
-<!-- ABOUT ME -->
-<img align="right" src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif" width="320" />
+<img align="right" src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif" width="300" />
 
 ### `> whoami`
 
 ```yaml
-name:      Uttkarsh Chambiyal
-role:      Full-Stack Developer
-location:  Bengaluru, Karnataka 🇮🇳
-degree:    B.Tech CSE  |  Semester 2
+name      : Uttkarsh Chambiyal
+role      : B.Tech CSE Student
+location  : Bengaluru, Karnataka, India
+degree    : B.Tech CSE  |  Semester 2
 
-currently:
-  - Building MERN stack projects
-  - LeetCode DSA grind (daily)
-  - Learning System Design
-  - Exploring AI/ML & automation
+focus:
+  - Frontend Development
+  - Data Structures & Algorithms
+  - Competitive Programming
+  - UI/UX Design with Figma
+
+currently_learning:
+  - MERN Stack (Full-Stack)
+  - System Design Fundamentals
+  - AI/ML Basics
 
 hobbies:
-  - Coding 💻
-  - Video Editing 🎬
-  - Formula 1 🏎️
-  - Debugging at midnight 🌙
+  - Coding
+  - Video Editing
+  - Formula 1
+  - Hackathons
 
 open_to:
   - Internships
   - Hackathons
-  - Freelance
+  - Freelance Projects
   - Open Source
 ```
 
 <br clear="right"/>
 
-<!-- SOCIAL LINKS -->
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uttkarsh-chambiyal-3495a8380/)
@@ -85,50 +87,15 @@ open_to:
 
 **Languages**
 
-[![Skills](https://skillicons.dev/icons?i=js,java,cpp,c,python,html,css&theme=dark)](https://skillicons.dev)
+[![Skills](https://skillicons.dev/icons?i=java,cpp,c,js,html,css&theme=dark)](https://skillicons.dev)
+
+**Design & Tools**
+
+[![Skills](https://skillicons.dev/icons?i=figma,git,github,gitlab,vscode,bootstrap&theme=dark)](https://skillicons.dev)
 
 **Currently Learning**
 
-[![Skills](https://skillicons.dev/icons?i=react,nodejs,express,mongodb,tailwind&theme=dark)](https://skillicons.dev)
-
-**Tools**
-
-[![Skills](https://skillicons.dev/icons?i=git,github,vscode,figma,vercel,postman&theme=dark)](https://skillicons.dev)
-
-</div>
-
----
-
-### `> github --stats`
-
-<div align="center">
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=Uttkarshchambiyal&show_icons=true&hide_border=true&bg_color=0d1117&title_color=C77DFF&icon_color=C77DFF&text_color=c9d1d9&include_all_commits=true&count_private=true" />
-<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=Uttkarshchambiyal&hide_border=true&background=0d1117&ring=C77DFF&fire=FF6EC7&currStreakLabel=C77DFF&sideLabels=888888&sideNums=c9d1d9&dates=555555" />
-
-<br/>
-
-<img height="180" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Uttkarshchambiyal&hide_border=true&bg_color=0d1117&title_color=C77DFF&text_color=c9d1d9&layout=donut-vertical&langs_count=6" />
-
-</div>
-
----
-
-### `> git log --graph`
-
-<div align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Uttkarshchambiyal&bg_color=0d1117&color=C77DFF&line=C77DFF&point=FF6EC7&area=true&area_color=1a0030&hide_border=true&custom_title=Contribution+Activity" width="100%"/>
-
-</div>
-
----
-
-### `> achievements --list`
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=Uttkarshchambiyal&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&row=1&column=6" width="100%" />
+[![Skills](https://skillicons.dev/icons?i=react,nodejs,mongodb&theme=dark)](https://skillicons.dev)
 
 </div>
 
