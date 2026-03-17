@@ -1,26 +1,41 @@
+<!-- MASTER HEAD BANNER -->
+<img src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif" width="100%" />
+
+<!-- WAVING HAND -->
+<h1 align="center">
+  <img src="https://github.com/Tarikul-Islam-Anik/tarikul-islam-anik/blob/main/assets/images/Waving%20Hand%20Medium-Light%20Skin%20Tone.png" width="80px" />
+</h1>
+
+<!-- TYPING - I AM -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=shark&color=gradient&customColorList=6,11,20&height=140&section=header&reversal=false" width="100%"/>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Comfortaa&weight=700&size=40&duration=2000&pause=1000&color=C77DFF&center=true&vCenter=true&width=600&height=80&lines=I+am+Uttkarsh+Chambiyal)](https://git.io/typing-svg)
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=900&size=30&duration=1&pause=1000&color=C77DFF&center=true&vCenter=true&width=600&lines=Uttkarsh+Chambiyal" alt="Name" />
+</div>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=16&duration=3000&pause=800&color=888888&center=true&vCenter=true&width=700&lines=Full-Stack+Dev+in+Progress+%E2%80%A2+DSA+Grinder+%E2%80%A2+B.Tech+CSE+%40+Sem+2;Building+real+things+that+actually+ship+%F0%9F%9A%80;Bengaluru%2C+India+%F0%9F%87%AE%F0%9F%87%B3+%E2%80%A2+Open+to+Internships+%26+Hackathons" />
+<!-- TYPING - ROLES -->
+<div align="center">
 
-<br/>
-
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uttkarsh-chambiyal-3495a8380/)
-[![Portfolio](https://img.shields.io/badge/-Portfolio-000000?style=flat-square&logo=vercel&logoColor=white)](https://www.uttkarshchambiyal.com/)
-[![Gmail](https://img.shields.io/badge/-Gmail-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:uttkarshchambiyal26@gmail.com)
-[![X](https://img.shields.io/badge/-X-000000?style=flat-square&logo=x&logoColor=white)](https://twitter.com/uttkarshx26)
-![Profile Views](https://komarev.com/ghpvc/?username=Uttkarshchambiyal&style=flat-square&color=C77DFF&label=views)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Comfortaa&size=22&duration=2500&pause=800&color=00D9FF&center=true&vCenter=true&width=700&height=50&lines=Full-Stack+Developer+%F0%9F%9A%80;DSA+Grinder+%7C+Competitive+Coder+%E2%9A%A1;MERN+Stack+%7C+B.Tech+CSE+%40+Sem+2;Open+Source+%7C+Hackathons+%7C+Freelance)](https://git.io/typing-svg)
 
 </div>
 
 <br/>
 
+<!-- TAGLINE -->
+<h3 align="center">
+A Passionate Full-Stack Developer and Problem Solver
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" alt="Fire" width="25" height="25" />
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="25" height="25" />
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Medium-Light%20Skin%20Tone.png" alt="Dev" width="25" height="25" />
+</h3>
+
+<br/>
+
 ---
 
-<img align="right" src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif" width="360" />
+<!-- ABOUT ME -->
+<img align="right" src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif" width="320" />
 
 ### `> whoami`
 
@@ -51,6 +66,17 @@ open_to:
 
 <br clear="right"/>
 
+<!-- SOCIAL LINKS -->
+<div align="center">
+
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uttkarsh-chambiyal-3495a8380/)
+[![Portfolio](https://img.shields.io/badge/-Portfolio-000000?style=flat-square&logo=vercel&logoColor=white)](https://www.uttkarshchambiyal.com/)
+[![Gmail](https://img.shields.io/badge/-Gmail-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:uttkarshchambiyal26@gmail.com)
+[![X](https://img.shields.io/badge/-X-000000?style=flat-square&logo=x&logoColor=white)](https://twitter.com/uttkarshx26)
+![Profile Views](https://komarev.com/ghpvc/?username=Uttkarshchambiyal&style=flat-square&color=C77DFF&label=views)
+
+</div>
+
 ---
 
 ### `> tech --stack`
@@ -59,15 +85,11 @@ open_to:
 
 **Languages**
 
-[![Skills](https://skillicons.dev/icons?i=js,ts,java,cpp,c,python&theme=dark)](https://skillicons.dev)
+[![Skills](https://skillicons.dev/icons?i=js,java,cpp,c,python,html,css&theme=dark)](https://skillicons.dev)
 
-**Frontend**
+**Currently Learning**
 
-[![Skills](https://skillicons.dev/icons?i=html,css,react,tailwind,vite&theme=dark)](https://skillicons.dev)
-
-**Backend & DB**
-
-[![Skills](https://skillicons.dev/icons?i=nodejs,express,mongodb,mysql&theme=dark)](https://skillicons.dev)
+[![Skills](https://skillicons.dev/icons?i=react,nodejs,express,mongodb,tailwind&theme=dark)](https://skillicons.dev)
 
 **Tools**
 
@@ -107,16 +129,6 @@ open_to:
 <div align="center">
 
 <img src="https://github-profile-trophy.vercel.app/?username=Uttkarshchambiyal&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&row=1&column=6" width="100%" />
-
-</div>
-
----
-
-### `> snake --play`
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake-dark.svg" width="100%" />
 
 </div>
 
