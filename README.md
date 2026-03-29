@@ -123,6 +123,14 @@ open_to:
 
 <div align="center">
 
+  ```diff
++ Passionate about building interactive web experiences
++ Exploring the intersection of code and creativity
++ Contributing to open-source projects
++ Crafting smooth CSS animations and web interactions
+- Bugs are just features waiting to be discovered! 🐛
+```
+
 ```
  ██╗   ██╗████████╗████████╗██╗  ██╗ █████╗ ██████╗ ███████╗██╗  ██╗
  ██║   ██║╚══██╔══╝╚══██╔══╝██║ ██╔╝██╔══██╗██╔══██╗██╔════╝██║  ██║
