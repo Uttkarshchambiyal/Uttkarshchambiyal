@@ -69,6 +69,14 @@ open_to:
 
 <br clear="right"/>
 
+  ```diff
++ Passionate about building interactive web experiences
++ Exploring the intersection of code and creativity
++ Contributing to open-source projects
++ Crafting smooth CSS animations and web interactions
+- Bugs are just features waiting to be discovered! 🐛
+```
+
 <div align="center">
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/uttkarsh-chambiyal-3495a8380/)
@@ -122,14 +130,6 @@ open_to:
 <br/><br/>
 
 <div align="center">
-
-  ```diff
-+ Passionate about building interactive web experiences
-+ Exploring the intersection of code and creativity
-+ Contributing to open-source projects
-+ Crafting smooth CSS animations and web interactions
-- Bugs are just features waiting to be discovered! 🐛
-```
 
 ```
  ██╗   ██╗████████╗████████╗██╗  ██╗ █████╗ ██████╗ ███████╗██╗  ██╗
