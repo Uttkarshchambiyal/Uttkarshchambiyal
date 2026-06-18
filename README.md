@@ -121,12 +121,6 @@ open_to:
 
 </div>
 
----
-
-<div align="center">
-
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" width="80%" />
-
 <br/><br/>
 
 <table>
