@@ -129,6 +129,17 @@ open_to:
 
 <br/><br/>
 
+<table>
+  <tr>
+    <td align="left">
+      <img src="https://leetcard.jacoblin.cool/uttkarshchambiyal?ext=heatmap"/>
+    </td>
+    <td align="right">
+      <img src="https://codeforces-readme-stats.vercel.app/api/card?username=Uttkarsh26"/>
+    </td>
+  </tr>
+</table>
+
 <div align="center">
 
 ```
