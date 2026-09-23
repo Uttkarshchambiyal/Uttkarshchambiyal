@@ -41,7 +41,7 @@ A Passionate Developer and Problem Solver
 name      : Uttkarsh Chambiyal
 role      : B.Tech CSE Student
 location  : Bengaluru, Karnataka, India
-degree    : B.Tech CSE  |  Semester 2
+degree    : B.Tech CSE  |  Semester 3
 
 focus:
   - Frontend Development
