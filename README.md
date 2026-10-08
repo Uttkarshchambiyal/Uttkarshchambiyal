@@ -1,6 +1,6 @@
 <!-- PERSONAL README HEADER -->
 <div align="center">
-  <img src="assets/uttkarsh-header-portrait.svg" alt="Uttkarsh Chambiyal — personal README header with my portrait" width="100%" />
+  <img src="assets/uttkarsh-header-wide.svg" alt="Uttkarsh Chambiyal — personal README header with my portrait" width="100%" />
 </div>
 
 <!-- TYPING - ROLES -->
