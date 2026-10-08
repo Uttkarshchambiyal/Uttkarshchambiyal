@@ -64,19 +64,7 @@ open_to:
 ### `> tech --stack`
 
 <div align="center">
-
-**Languages**
-
-[![Skills](https://skillicons.dev/icons?i=java,cpp,c,js,html,css&theme=dark)](https://skillicons.dev)
-
-**Design & Tools**
-
-[![Skills](https://skillicons.dev/icons?i=figma,git,github,gitlab,vscode,bootstrap&theme=dark)](https://skillicons.dev)
-
-**Currently Learning**
-
-[![Skills](https://skillicons.dev/icons?i=react,nodejs,mongodb&theme=dark)](https://skillicons.dev)
-
+  <img src="assets/tech-stack-scroll.svg" alt="Scrolling tech stack — Languages: Java, C++, C, JavaScript, HTML, CSS. Design and tools: Figma, Git, GitHub, GitLab, VS Code, Bootstrap. Currently learning: React, Node.js, MongoDB." width="100%" />
 </div>
 
 ---
