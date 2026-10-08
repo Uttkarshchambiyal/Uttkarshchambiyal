@@ -7,7 +7,8 @@
 
 <!-- WHOAMI:START -->
 <a name="-whoami"></a>
-<h3 align="center"><img src="assets/whoami-heading-inter.svg" alt="&gt; whoami" width="100%" /></h3>
+<a name="whoami"></a>
+<h3 align="center"><img src="assets/whoami-heading-staggered.svg" alt="Whoami" width="100%" /></h3>
 
 <picture>
   <source media="(max-width: 767px)" srcset="assets/whoami-card-mobile.svg" />
@@ -44,7 +45,8 @@ Passionate about building interactive web experiences, bringing code and creativ
 ---
 
 <a name="-tech---stack"></a>
-<h3 align="center"><img src="assets/tech-stack-heading-inter.svg" alt="&gt; tech --stack" width="100%" /></h3>
+<a name="tech-stack"></a>
+<h3 align="center"><img src="assets/tech-stack-heading-staggered.svg" alt="Tech Stack" width="100%" /></h3>
 
 <div align="center">
   <img src="assets/tech-stack-updated.svg" alt="Scrolling tech stack — Languages: Java, C++, C, JavaScript, HTML, CSS. Design and tools: Figma, Git, GitHub, GitLab, VS Code, Bootstrap, Claude, Codex, IntelliJ IDEA, PyCharm, DataGrip. Currently learning: React, Node.js, MongoDB, Spring Boot, SwiftUI." width="100%" />
@@ -53,7 +55,8 @@ Passionate about building interactive web experiences, bringing code and creativ
 ---
 
 <a name="-cp---platforms"></a>
-<h3 align="center"><img src="assets/cp-platforms-heading-inter.svg" alt="&gt; cp --platforms" width="100%" /></h3>
+<a name="cp-platforms"></a>
+<h3 align="center"><img src="assets/cp-platforms-heading-staggered.svg" alt="CP Platforms" width="100%" /></h3>
 
 <div align="center">
 
@@ -84,7 +87,8 @@ Passionate about building interactive web experiences, bringing code and creativ
 
 <!-- CONTRIBUTION-SKYLINE:START -->
 <a name="-contributions---skyline"></a>
-<h3 align="center"><img src="assets/contributions-heading-inter.svg" alt="&gt; contributions --skyline" width="100%" /></h3>
+<a name="contributions"></a>
+<h3 align="center"><img src="assets/contributions-heading-staggered.svg" alt="Contribution Skyline" width="100%" /></h3>
 
 <div align="center">
   <a href="https://github.com/Uttkarshchambiyal?tab=overview">
