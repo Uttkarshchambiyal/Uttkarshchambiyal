@@ -103,7 +103,7 @@ Passionate about building interactive web experiences, bringing code and creativ
 <div align="center">
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="assets/coder-workshop.png" />
-    <img src="assets/coder-workshop.gif" alt="A 3D coder at a workstation, typing, using the mouse, and watching code build on two screens — a looping animation with no buttons or controls" width="100%" />
+    <img src="assets/coder-workshop.gif" alt="A smoothly animated 3D coder typing and using the mouse, with readable TypeScript code and build output on two monitors — an 8-second loop with no buttons or controls" width="100%" />
   </picture>
 </div>
 <!-- CODER-WORKSHOP:END -->
