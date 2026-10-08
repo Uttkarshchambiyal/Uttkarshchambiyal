@@ -2,7 +2,7 @@
 <title id="title">Uttkarsh Chambiyal — personal README header</title>
 <desc id="description">Uttkarsh Chambiyal in large lime lettering on a black background, with his supplied full photo displayed above the name without cropping. Designing human experiences in code.</desc>
 <defs>
-  
+
   <filter id="blur0" x="-10%" y="-40%" width="120%" height="180%"><feGaussianBlur stdDeviation="0"><animate attributeName="stdDeviation" values="7;0" dur="1.2s" fill="freeze"/></feGaussianBlur></filter>
   <filter id="blur1" x="-10%" y="-40%" width="120%" height="180%"><feGaussianBlur stdDeviation="0"><animate attributeName="stdDeviation" values="7;0" dur="1.5s" fill="freeze"/></feGaussianBlur></filter>
   <g id="portrait">
