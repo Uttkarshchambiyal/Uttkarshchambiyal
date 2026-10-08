@@ -1,16 +1,6 @@
-<!-- MASTER HEAD BANNER -->
-<img src="https://user-images.githubusercontent.com/74038190/225813708-98b745f2-7d22-48cf-9150-083f1b00d6c9.gif" width="100%" />
-
-<!-- WAVING HAND -->
-<h1 align="center">
-  <img src="https://github.com/Tarikul-Islam-Anik/tarikul-islam-anik/blob/main/assets/images/Waving%20Hand%20Medium-Light%20Skin%20Tone.png" width="80px" />
-</h1>
-
-<!-- TYPING - NAME -->
+<!-- PERSONAL README HEADER -->
 <div align="center">
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Comfortaa&weight=700&size=40&duration=2000&pause=1000&color=C77DFF&center=true&vCenter=true&width=650&height=80&lines=I+am+Uttkarsh+Chambiyal)](https://git.io/typing-svg)
-
+  <img src="assets/uttkarsh-header.svg" alt="Uttkarsh Chambiyal — personal README header with my portrait" width="100%" />
 </div>
 
 <!-- TYPING - ROLES -->
