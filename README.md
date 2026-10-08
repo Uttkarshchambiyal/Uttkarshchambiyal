@@ -61,10 +61,10 @@ open_to:
 
 ---
 
-### `> tech --stack`
+<h3 align="center"><code>&gt; tech --stack</code></h3>
 
 <div align="center">
-  <img src="assets/tech-stack-marquee.svg" alt="Scrolling tech stack — Languages: Java, C++, C, JavaScript, HTML, CSS. Design and tools: Figma, Git, GitHub, GitLab, VS Code, Bootstrap. Currently learning: React, Node.js, MongoDB." width="100%" />
+  <img src="assets/tech-stack-updated.svg" alt="Scrolling tech stack — Languages: Java, C++, C, JavaScript, HTML, CSS. Design and tools: Figma, Git, GitHub, GitLab, VS Code, Bootstrap, Claude, Codex, IntelliJ IDEA, PyCharm, DataGrip. Currently learning: React, Node.js, MongoDB, Spring Boot, SwiftUI." width="100%" />
 </div>
 
 ---
