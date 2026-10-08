@@ -12,6 +12,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 HEADINGS = {
+    "whoami-heading": "> whoami",
     "tech-stack-heading": "> tech --stack",
     "cp-platforms-heading": "> cp --platforms",
     "contributions-heading": "> contributions --skyline",

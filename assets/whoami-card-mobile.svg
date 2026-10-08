@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 480 1360" role="img" aria-labelledby="title description">
+<title id="title">About Uttkarsh Chambiyal</title>
+<desc id="description">Uttkarsh Chambiyal, B.Tech CSE student, semester 3, based in Bengaluru, Karnataka, India. Focus: frontend development, data structures and algorithms, competitive programming, and UI/UX design with Figma. Currently learning React, Node.js, MongoDB, Spring Boot and SwiftUI; also exploring system design and AI/ML. Tools: Claude, Codex, IntelliJ IDEA, PyCharm and DataGrip. Open to internships, hackathons, freelance projects and open source. Hobbies: coding, video editing, Formula 1 and hackathons. The focus panel rotates automatically.</desc>
+<style>text{font-family:Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Arial,sans-serif;fill:#fafafa}.muted{fill:#a1a1aa}.eyebrow{fill:#b2b2bb;font-size:10px;font-weight:600;letter-spacing:1.6px}.code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px}.still{display:none}@media(prefers-reduced-motion:reduce){.motion{display:none}.still{display:inline}}</style>
+<defs>
+<symbol id="icon-briefcase-business" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path xmlns="http://www.w3.org/2000/svg" d="M12 12h.01" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M22 13a18.15 18.15 0 0 1-20 0" />
+  <rect xmlns="http://www.w3.org/2000/svg" width="20" height="14" x="2" y="6" rx="2" />
+</symbol>
+<symbol id="icon-terminal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path xmlns="http://www.w3.org/2000/svg" d="M12 19h8" />
+  <path xmlns="http://www.w3.org/2000/svg" d="m4 17 6-6-6-6" />
+</symbol>
+<symbol id="icon-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path xmlns="http://www.w3.org/2000/svg" d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M20 2v4" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M22 4h-4" />
+  <circle xmlns="http://www.w3.org/2000/svg" cx="4" cy="20" r="2" />
+</symbol>
+<symbol id="icon-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path xmlns="http://www.w3.org/2000/svg" d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17" />
+</symbol>
+<symbol id="icon-git-branch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path xmlns="http://www.w3.org/2000/svg" d="M15 6a9 9 0 0 0-9 9V3" />
+  <circle xmlns="http://www.w3.org/2000/svg" cx="18" cy="6" r="3" />
+  <circle xmlns="http://www.w3.org/2000/svg" cx="6" cy="18" r="3" />
+</symbol>
+<symbol id="icon-cpu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path xmlns="http://www.w3.org/2000/svg" d="M12 20v2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M12 2v2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M17 20v2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M17 2v2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M2 12h2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M2 17h2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M2 7h2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M20 12h2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M20 17h2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M20 7h2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M7 20v2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M7 2v2" />
+  <rect xmlns="http://www.w3.org/2000/svg" x="4" y="4" width="16" height="16" rx="2" />
+  <rect xmlns="http://www.w3.org/2000/svg" x="8" y="8" width="8" height="8" rx="1" />
+</symbol>
+<symbol id="icon-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path xmlns="http://www.w3.org/2000/svg" d="M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M4 22h16" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3" />
+</symbol>
+<symbol id="icon-pen-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path xmlns="http://www.w3.org/2000/svg" d="m18 13-.654-4.736a4 4 0 00-2.756-3.266l-9.163-2.9a2 2 0 00-2.017.493l-.82.819a2 2 0 00-.492 2.017l2.9 9.163a4 4 0 003.266 2.756L13 18" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M18.648 12.352a1.205 1.205 0 011.704 0l1.296 1.296a1.205 1.205 0 010 1.704l-6.296 6.296a1.205 1.205 0 01-1.704 0l-1.296-1.296a1.205 1.205 0 010-1.704z" />
+  <path xmlns="http://www.w3.org/2000/svg" d="m3 3 6.586 6.586" />
+  <circle xmlns="http://www.w3.org/2000/svg" cx="11" cy="11" r="2" />
+</symbol>
+<symbol id="icon-map-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path xmlns="http://www.w3.org/2000/svg" d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+  <circle xmlns="http://www.w3.org/2000/svg" cx="12" cy="10" r="3" />
+</symbol>
+<symbol id="icon-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path xmlns="http://www.w3.org/2000/svg" d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" />
+  <path xmlns="http://www.w3.org/2000/svg" d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" />
+</symbol>
+<symbol id="icon-code-xml" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path xmlns="http://www.w3.org/2000/svg" d="m18 16 4-4-4-4" />
+  <path xmlns="http://www.w3.org/2000/svg" d="m6 8-4 4 4 4" />
+  <path xmlns="http://www.w3.org/2000/svg" d="m14.5 4-5 16" />
+</symbol>
+</defs>
+<rect x=".5" y=".5" width="479" height="1359" rx="24" fill="#080808" stroke="#27272a"/>
+<rect x="24" y="30" width="269" height="30" rx="15" fill="#18181b" stroke="#3f3f46" />
+<use href="#icon-sparkles" x="36" y="37" width="16" height="16" color="#e4e4e7"/>
+<text x="63" y="50" font-size="10" font-weight="600" class="muted" letter-spacing="1">B.TECH CSE · SEMESTER 3</text>
+<text x="24" y="109" font-size="33" font-weight="650" class="" letter-spacing="-1.5">Uttkarsh Chambiyal</text>
+<text x="24" y="140" font-size="15" font-weight="400" class="muted" >Learning by building interactive experiences.</text>
+<rect x="24" y="178" width="432" height="422" rx="18" fill="#0d0d0f" stroke="#27272a" />
+<use href="#icon-sparkles" x="48" y="201" width="17" height="17" color="#e4e4e7"/>
+<text x="74" y="214" font-size="10" font-weight="600" class="eyebrow" >WHAT I FOCUS ON</text>
+<text x="48" y="255" font-size="27" font-weight="650" class="" letter-spacing="-.8">Code. Create. Compete.</text>
+<text x="48" y="281" font-size="14" font-weight="400" class="muted" >Four things that keep me building.</text>
+<rect x="48.0" y="306" width="186.0" height="74" rx="12" fill="#151518" stroke="#29292e" />
+<g class="motion" opacity="1"><animate attributeName="opacity" values="1;0;0;0;1" keyTimes="0;.25;.5;.75;1" dur="20s" repeatCount="indefinite" calcMode="discrete"/>
+<rect x="48.0" y="306" width="186.0" height="74" rx="12" fill="#27272a" stroke="#71717a" />
+</g>
+<g class="still">
+<rect x="48.0" y="306" width="186.0" height="74" rx="12" fill="#27272a" stroke="#71717a" />
+</g>
+<use href="#icon-code-xml" x="61.0" y="319" width="19" height="19" color="#e4e4e7"/>
+<text x="89.0" y="334" font-size="12.5" font-weight="600" class="" >Frontend</text>
+<text x="61.0" y="362" font-size="10.5" font-weight="400" class="muted" >Interactive web experiences</text>
+<rect x="246.0" y="306" width="186.0" height="74" rx="12" fill="#151518" stroke="#29292e" />
+<g class="motion" opacity="0"><animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;.25;.5;.75;1" dur="20s" repeatCount="indefinite" calcMode="discrete"/>
+<rect x="246.0" y="306" width="186.0" height="74" rx="12" fill="#27272a" stroke="#71717a" />
+</g>
+<use href="#icon-cpu" x="259.0" y="319" width="19" height="19" color="#e4e4e7"/>
+<text x="287.0" y="334" font-size="12.5" font-weight="600" class="" >DSA</text>
+<text x="259.0" y="362" font-size="10.5" font-weight="400" class="muted" >Data structures &amp; algorithms</text>
+<rect x="48.0" y="392" width="186.0" height="74" rx="12" fill="#151518" stroke="#29292e" />
+<g class="motion" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.25;.5;.75;1" dur="20s" repeatCount="indefinite" calcMode="discrete"/>
+<rect x="48.0" y="392" width="186.0" height="74" rx="12" fill="#27272a" stroke="#71717a" />
+</g>
+<use href="#icon-trophy" x="61.0" y="405" width="19" height="19" color="#e4e4e7"/>
+<text x="89.0" y="420" font-size="12.5" font-weight="600" class="" >Competitive coding</text>
+<text x="61.0" y="448" font-size="10.5" font-weight="400" class="muted" >Practice. Solve. Improve.</text>
+<rect x="246.0" y="392" width="186.0" height="74" rx="12" fill="#151518" stroke="#29292e" />
+<g class="motion" opacity="0"><animate attributeName="opacity" values="0;0;0;1;0" keyTimes="0;.25;.5;.75;1" dur="20s" repeatCount="indefinite" calcMode="discrete"/>
+<rect x="246.0" y="392" width="186.0" height="74" rx="12" fill="#27272a" stroke="#71717a" />
+</g>
+<use href="#icon-pen-tool" x="259.0" y="405" width="19" height="19" color="#e4e4e7"/>
+<text x="287.0" y="420" font-size="12.5" font-weight="600" class="" >UI / UX design</text>
+<text x="259.0" y="448" font-size="10.5" font-weight="400" class="muted" >Design with Figma</text>
+<rect x="48" y="488" width="384" height="99" rx="12" fill="#18181b" stroke="#3f3f46" />
+<text x="64" y="512" font-size="9" font-weight="600" class="eyebrow" >IN FOCUS</text>
+<g class="motion" opacity="1"><animate attributeName="opacity" values="1;0;0;0;1" keyTimes="0;.25;.5;.75;1" dur="20s" repeatCount="indefinite" calcMode="discrete"/>
+<text x="64" y="541" font-size="18" font-weight="600" class="" letter-spacing="-.4">Building interfaces</text>
+<text x="64" y="566" font-size="11" font-weight="400" class="muted" >React, JavaScript, HTML &amp; CSS</text>
+</g>
+<g class="motion" opacity="0"><animate attributeName="opacity" values="0;1;0;0;0" keyTimes="0;.25;.5;.75;1" dur="20s" repeatCount="indefinite" calcMode="discrete"/>
+<text x="64" y="541" font-size="18" font-weight="600" class="" letter-spacing="-.4">Thinking through problems</text>
+<text x="64" y="566" font-size="11" font-weight="400" class="muted" >C++ and Java · one problem at a time</text>
+</g>
+<g class="motion" opacity="0"><animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;.25;.5;.75;1" dur="20s" repeatCount="indefinite" calcMode="discrete"/>
+<text x="64" y="541" font-size="18" font-weight="600" class="" letter-spacing="-.4">Learning through practice</text>
+<text x="64" y="566" font-size="11" font-weight="400" class="muted" >LeetCode, Codeforces &amp; GeeksforGeeks</text>
+</g>
+<g class="motion" opacity="0"><animate attributeName="opacity" values="0;0;0;1;0" keyTimes="0;.25;.5;.75;1" dur="20s" repeatCount="indefinite" calcMode="discrete"/>
+<text x="64" y="541" font-size="18" font-weight="600" class="" letter-spacing="-.4">Crafting thoughtful experiences</text>
+<text x="64" y="566" font-size="11" font-weight="400" class="muted" >Figma · clean layouts · smooth motion</text>
+</g>
+<g class="still">
+<text x="64" y="541" font-size="18" font-weight="600" class="" >Building interfaces</text>
+<text x="64" y="566" font-size="11" font-weight="400" class="muted" >React, JavaScript, HTML &amp; CSS</text>
+</g>
+<rect x="24" y="616" width="208" height="218" rx="18" fill="#0d0d0f" stroke="#27272a" />
+<rect x="44" y="636" width="37" height="37" rx="10" fill="#27272a" stroke="#3f3f46" />
+<use href="#icon-map-pin" x="52" y="644" width="21" height="21" color="#e4e4e7"/>
+<text x="44" y="706" font-size="17" font-weight="600" class="" >Based in</text>
+<text x="44" y="738" font-size="24" font-weight="650" class="" letter-spacing="-.7">Bengaluru</text>
+<text x="44" y="763" font-size="13" font-weight="400" class="muted" >Karnataka, India</text>
+<rect x="44" y="785" width="111" height="27" rx="7" fill="#27272a" stroke="#3f3f46" />
+<text x="56" y="803" font-size="10" font-weight="600" class="muted" letter-spacing=".7">CSE STUDENT</text>
+<rect x="248" y="616" width="208" height="218" rx="18" fill="#0d0d0f" stroke="#27272a" />
+<rect x="268" y="636" width="37" height="37" rx="10" fill="#27272a" stroke="#3f3f46" />
+<use href="#icon-layers" x="276" y="644" width="21" height="21" color="#e4e4e7"/>
+<text x="268" y="703" font-size="16" font-weight="600" class="" >Currently learning</text>
+<rect x="268" y="716" width="168" height="22" rx="6" fill="#18181b" stroke="#29292e" />
+<text x="278" y="731" font-size="12" font-weight="500" class="" >React · Node.js</text>
+<rect x="268" y="741" width="168" height="22" rx="6" fill="#18181b" stroke="#29292e" />
+<text x="278" y="756" font-size="12" font-weight="500" class="" >MongoDB</text>
+<rect x="268" y="766" width="168" height="22" rx="6" fill="#18181b" stroke="#29292e" />
+<text x="278" y="781" font-size="12" font-weight="500" class="" >Spring Boot</text>
+<rect x="268" y="791" width="168" height="22" rx="6" fill="#18181b" stroke="#29292e" />
+<text x="278" y="806" font-size="12" font-weight="500" class="" >SwiftUI</text>
+<rect x="24" y="850" width="432" height="206" rx="18" fill="#0d0d0f" stroke="#27272a" />
+<use href="#icon-terminal" x="44" y="870" width="19" height="19" color="#e4e4e7"/>
+<text x="73" y="885" font-size="14" font-weight="600" class="" >Builder&#x27;s config</text>
+<text x="434" y="884" font-size="11" font-weight="400" class="muted" text-anchor="end">profile.ts</text>
+<rect x="40" y="900" width="400" height="140" rx="10" fill="#080808" stroke="#27272a" />
+<text x="52" y="924" font-size="14" font-weight="400" class="code" xml:space="preserve">const uttkarsh = {</text>
+<text x="52" y="943" font-size="14" font-weight="400" class="code" xml:space="preserve">  learning: [&quot;MERN&quot;, &quot;Spring Boot&quot;, &quot;SwiftUI&quot;],</text>
+<text x="52" y="962" font-size="14" font-weight="400" class="code" xml:space="preserve">  tools: [&quot;Claude&quot;, &quot;Codex&quot;, &quot;IntelliJ IDEA&quot;,</text>
+<text x="52" y="981" font-size="14" font-weight="400" class="code" xml:space="preserve">          &quot;PyCharm&quot;, &quot;DataGrip&quot;],</text>
+<text x="52" y="1000" font-size="14" font-weight="400" class="code" xml:space="preserve">  exploring: [&quot;System design&quot;, &quot;AI / ML&quot;]</text>
+<text x="52" y="1019" font-size="14" font-weight="400" class="code" xml:space="preserve">};</text>
+<text x="24" y="1076" font-size="10" font-weight="600" class="eyebrow" >OPEN TO</text>
+<rect x="24" y="1090" width="208" height="88" rx="12" fill="#0d0d0f" stroke="#27272a" />
+<use href="#icon-rocket" x="40" y="1105" width="18" height="18" color="#e4e4e7"/>
+<text x="68" y="1120" font-size="13" font-weight="600" class="" >Internships</text>
+<text x="40" y="1151" font-size="11" font-weight="400" class="muted" >Learn with a team</text>
+<rect x="248" y="1090" width="208" height="88" rx="12" fill="#0d0d0f" stroke="#27272a" />
+<use href="#icon-trophy" x="264" y="1105" width="18" height="18" color="#e4e4e7"/>
+<text x="292" y="1120" font-size="13" font-weight="600" class="" >Hackathons</text>
+<text x="264" y="1151" font-size="11" font-weight="400" class="muted" >Build under pressure</text>
+<rect x="24" y="1194" width="208" height="88" rx="12" fill="#0d0d0f" stroke="#27272a" />
+<use href="#icon-briefcase-business" x="40" y="1209" width="18" height="18" color="#e4e4e7"/>
+<text x="68" y="1224" font-size="13" font-weight="600" class="" >Freelance projects</text>
+<text x="40" y="1255" font-size="11" font-weight="400" class="muted" >Thoughtful web projects</text>
+<rect x="248" y="1194" width="208" height="88" rx="12" fill="#0d0d0f" stroke="#27272a" />
+<use href="#icon-git-branch" x="264" y="1209" width="18" height="18" color="#e4e4e7"/>
+<text x="292" y="1224" font-size="13" font-weight="600" class="" >Open source</text>
+<text x="264" y="1255" font-size="11" font-weight="400" class="muted" >Collaborate &amp; contribute</text>
+<path d="M24 1290H456" stroke="#27272a"/>
+<text x="24" y="1313" font-size="9" font-weight="600" class="eyebrow" >OFF THE KEYBOARD</text>
+<text x="24" y="1335" font-size="12" font-weight="400" class="muted" >Video editing · Formula 1 · Hackathons</text>
+</svg>

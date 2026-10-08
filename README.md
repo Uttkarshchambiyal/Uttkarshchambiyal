@@ -5,49 +5,31 @@
 
 ---
 
-<img align="right" src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif" width="300" />
+<!-- WHOAMI:START -->
+<a name="-whoami"></a>
+<h3 align="center"><img src="assets/whoami-heading-inter.svg" alt="&gt; whoami" width="100%" /></h3>
 
-### `> whoami`
+<picture>
+  <source media="(max-width: 767px)" srcset="assets/whoami-card-mobile.svg" />
+  <img src="assets/whoami-card.svg" alt="About Uttkarsh Chambiyal — B.Tech CSE student in Bengaluru. Focus: frontend, DSA, competitive coding, and UI/UX. Learning MERN, Spring Boot, and SwiftUI. Tools: Claude, Codex, IntelliJ IDEA, PyCharm, and DataGrip. Open to internships, hackathons, freelance projects, and open source." width="100%" />
+</picture>
 
-```yaml
-name      : Uttkarsh Chambiyal
-role      : B.Tech CSE Student
-location  : Bengaluru, Karnataka, India
-degree    : B.Tech CSE  |  Semester 3
+<details>
+<summary>About me — text version</summary>
 
-focus:
-  - Frontend Development
-  - Data Structures & Algorithms
-  - Competitive Programming
-  - UI/UX Design with Figma
+**Uttkarsh Chambiyal** · B.Tech CSE, Semester 3 · Bengaluru, Karnataka, India.
 
-currently_learning:
-  - MERN Stack (Full-Stack)
-  - System Design Fundamentals
-  - AI/ML Basics
+- **Focus:** Frontend development, data structures & algorithms, competitive programming, and UI/UX design with Figma.
+- **Currently learning:** React, Node.js, MongoDB, Spring Boot, and SwiftUI.
+- **Also exploring:** System design fundamentals and AI/ML basics.
+- **Tools:** Claude, Codex, IntelliJ IDEA, PyCharm, and DataGrip.
+- **Hobbies:** Coding, video editing, Formula 1, and hackathons.
+- **Open to:** Internships, hackathons, freelance projects, and open source.
 
-hobbies:
-  - Coding
-  - Video Editing
-  - Formula 1
-  - Hackathons
+Passionate about building interactive web experiences, bringing code and creativity together, and crafting smooth animations.
 
-open_to:
-  - Internships
-  - Hackathons
-  - Freelance Projects
-  - Open Source
-```
-
-<br clear="right"/>
-
-  ```diff
-+ Passionate about building interactive web experiences
-+ Exploring the intersection of code and creativity
-+ Contributing to open-source projects
-+ Crafting smooth CSS animations and web interactions
-- Bugs are just features waiting to be discovered! 🐛
-```
+</details>
+<!-- WHOAMI:END -->
 
 <div align="center">
 
