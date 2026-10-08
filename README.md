@@ -145,7 +145,5 @@ open_to:
   <a href="https://github.com/Uttkarshchambiyal?tab=overview">
     <img src="assets/contribution-skyline.svg" alt="Uttkarsh Chambiyal's real GitHub contributions: a heat map that rises into a 3D skyline" width="100%" />
   </a>
-
-  <p>Every day of the last year, built into a skyline.<br/>Automatically refreshed from my GitHub contribution calendar every 6 hours.</p>
 </div>
 <!-- CONTRIBUTION-SKYLINE:END -->
