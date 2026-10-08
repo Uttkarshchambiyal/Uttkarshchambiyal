@@ -62,7 +62,7 @@ open_to:
 ---
 
 <a name="-tech---stack"></a>
-<h3 align="center"><img src="assets/tech-stack-heading.svg" alt="&gt; tech --stack" width="100%" /></h3>
+<h3 align="center"><img src="assets/tech-stack-heading-inter.svg" alt="&gt; tech --stack" width="100%" /></h3>
 
 <div align="center">
   <img src="assets/tech-stack-updated.svg" alt="Scrolling tech stack — Languages: Java, C++, C, JavaScript, HTML, CSS. Design and tools: Figma, Git, GitHub, GitLab, VS Code, Bootstrap, Claude, Codex, IntelliJ IDEA, PyCharm, DataGrip. Currently learning: React, Node.js, MongoDB, Spring Boot, SwiftUI." width="100%" />
@@ -71,7 +71,7 @@ open_to:
 ---
 
 <a name="-cp---platforms"></a>
-<h3 align="center"><img src="assets/cp-platforms-heading.svg" alt="&gt; cp --platforms" width="100%" /></h3>
+<h3 align="center"><img src="assets/cp-platforms-heading-inter.svg" alt="&gt; cp --platforms" width="100%" /></h3>
 
 <div align="center">
 
@@ -102,7 +102,7 @@ open_to:
 
 <!-- CONTRIBUTION-SKYLINE:START -->
 <a name="-contributions---skyline"></a>
-<h3 align="center"><img src="assets/contributions-heading.svg" alt="&gt; contributions --skyline" width="100%" /></h3>
+<h3 align="center"><img src="assets/contributions-heading-inter.svg" alt="&gt; contributions --skyline" width="100%" /></h3>
 
 <div align="center">
   <a href="https://github.com/Uttkarshchambiyal?tab=overview">
