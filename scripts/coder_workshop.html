@@ -8,11 +8,11 @@ body{margin:0;background:#101720;color:#e4e9ef;font:15px system-ui}main{max-widt
 </style>
 <script type="importmap">{"imports":{"three":"/vendor/build/three.module.js"}}</script>
 </head>
-<body><main><p>Authoring preview · the exported animation contains only the workstation</p><div id="scene"></div><nav><button id="preview">Save still preview</button><button id="render">Render animation</button><span id="status">Preparing scene…</span></nav></main>
+<body><main><p>Authoring preview · the exported animation contains only the workstation</p><div id="scene"></div><nav><label>Scene time <input id="time" type="range" min="0" max="15.98" step="0.02" value="7" /></label><button id="play">Pause preview</button><button id="preview">Save still preview</button><button id="render">Render animation</button><span id="status">Preparing scene…</span></nav></main>
 <script type="module">
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from '/vendor/examples/jsm/geometries/RoundedBoxGeometry.js';
-const W=1600,H=1024,N=200,LOOP=8, status=document.querySelector('#status');
+const W=1600,H=1024,N=800,FPS=50,LOOP=16, status=document.querySelector('#status');
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z), scene=new THREE.Scene();
 const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true,alpha:false});
 renderer.setSize(W,H);renderer.setPixelRatio(1);renderer.outputColorSpace=THREE.SRGBColorSpace;
@@ -67,15 +67,31 @@ const codeLines=[
  [['};','#d1ddeb']],
  [['ship','#f2d9a1'],['(me);','#d1ddeb']]
 ];
+const smooth=(a,b,t)=>{const x=THREE.MathUtils.clamp((t-a)/(b-a),0,1);return x*x*x*(x*(x*6-15)+10);};
+const typedLength=codeLines.reduce((n,line)=>n+line.reduce((m,[text])=>m+text.length,0)+1,0);
+function screenState(t){return {wake:smooth(4.35,4.9,t)*(1-smooth(12.7,13.2,t)),typed:Math.floor(typedLength*smooth(5.0,9.35,t)),build:smooth(9.4,10.45,t),done:t>=10.45};}
 function editor(t){
+ const state=screenState(t);
+ cc.fillStyle='#08111b';cc.fillRect(0,0,1280,800);
+ if(state.wake<.001){cc.font='60px Menlo,monospace';cc.fillStyle='#243440';cc.textAlign='center';cc.fillText('</>',640,425);cc.textAlign='left';codeTexture.needsUpdate=true;return;}
+ cc.save();cc.globalAlpha=state.wake;
  cc.fillStyle='#101b29';cc.fillRect(0,0,1280,800);cc.fillStyle='#233244';cc.fillRect(0,0,1280,70);
  for(let i=0;i<3;i++){cc.fillStyle=['#ee806a','#e4b36d','#80b99a'][i];cc.beginPath();cc.arc(31+i*34,35,9,0,Math.PI*2);cc.fill();}
- cc.font='24px system-ui';cc.fillStyle='#dce5ed';cc.fillText('workshop.ts',160,44);cc.fillStyle='#567089';cc.fillText('src / profile',1000,44);
- cc.fillStyle='#172537';cc.fillRect(0,70,70,670);cc.fillStyle='#7191ab';for(let j=0;j<4;j++){cc.strokeStyle=j===0?'#eb9b5a':'#617c96';cc.lineWidth=3;cc.strokeRect(24,108+j*88,22,26);}
- cc.font='39px Menlo, monospace';
- codeLines.forEach((tokens,i)=>{const y=120+i*55;cc.fillStyle='#5c758e';cc.font='26px Menlo, monospace';cc.fillText(String(i+1).padStart(2,' '),89,y);cc.font='39px Menlo, monospace';let x=150;for(const [text,color] of tokens){cc.fillStyle=color;cc.fillText(text,x,y);x+=cc.measureText(text).width;}if(i===8){cc.fillStyle=`rgba(237,180,112,${.4+.6*(.5+.5*Math.sin(t*Math.PI*2))})`;cc.fillRect(x+5,y-32,3,41);}});
- cc.fillStyle='#0b1420';cc.fillRect(70,650,1210,102);cc.font='27px Menlo, monospace';cc.fillStyle='#8aa6bd';cc.fillText('$ npm run build',108,685);cc.fillStyle='#94d7aa';cc.fillText('✓ compiled successfully · app ready',108,727);
- cc.fillStyle='#37516b';cc.fillRect(0,760,1280,40);cc.font='22px Menlo, monospace';cc.fillStyle='#d1dfed';cc.fillText('main  •  TypeScript',28,786);cc.fillText('UTF-8    Ln 9, Col 10',943,786);codeTexture.needsUpdate=true;
+ cc.font='24px system-ui';cc.fillStyle='#dce5ed';cc.fillText('workshop.ts',160,44);cc.fillStyle='#718ba3';cc.fillText('src / profile',1000,44);
+ cc.fillStyle='#172537';cc.fillRect(0,70,70,670);for(let j=0;j<4;j++){cc.strokeStyle=j===0?'#eb9b5a':'#617c96';cc.lineWidth=3;cc.strokeRect(24,108+j*88,22,26);}
+ let remaining=state.typed,caret={x:150,y:120,line:1};
+ codeLines.forEach((tokens,i)=>{const y=120+i*55;cc.fillStyle='#5c758e';cc.font='26px Menlo,monospace';cc.fillText(String(i+1).padStart(2,' '),89,y);cc.font='39px Menlo,monospace';let x=150;
+  for(const [text,color] of tokens){const visible=text.slice(0,Math.max(0,remaining));cc.fillStyle=color;cc.fillText(visible,x,y);x+=cc.measureText(visible).width;remaining-=text.length;}
+  if(remaining>=0)caret={x,y,line:i+1};else if(remaining+tokens.reduce((n,[text])=>n+text.length,0)>=0)caret={x,y,line:i+1};remaining-=1;
+ });
+ cc.fillStyle='rgba(119,173,219,.08)';cc.fillRect(135,caret.y-38,1120,51);
+ cc.fillStyle=`rgba(245,190,120,${.45+.55*(.5+.5*Math.sin(t*Math.PI*3))})`;cc.fillRect(caret.x+4,caret.y-32,3,41);
+ cc.fillStyle='#0b1420';cc.fillRect(70,650,1210,102);cc.font='27px Menlo,monospace';cc.fillStyle='#8aa6bd';cc.fillText(t<9.4?'TypeScript · editing…':'$ npm run build',108,685);
+ cc.fillStyle=state.done?'#94d7aa':'#dfb77e';cc.fillText(state.done?'✓ compiled successfully · app ready':t>=9.4?'building '+Math.floor(state.build*100)+'%':'',108,727);
+ if(t>=9.4){cc.fillStyle='#76bc96';cc.fillRect(70,750,1210*state.build,6);}
+ cc.fillStyle='#37516b';cc.fillRect(0,760,1280,40);cc.font='22px Menlo,monospace';cc.fillStyle='#d1dfed';cc.fillText('main  •  TypeScript',28,786);cc.fillText('UTF-8    Ln '+caret.line,1030,786);
+ if(state.done){cc.fillStyle='#244d3d';cc.fillRect(900,84,345,49);cc.fillStyle='#b8efc8';cc.font='25px Menlo,monospace';cc.fillText('✓ BUILD SUCCESS',925,117);}
+ cc.restore();codeTexture.needsUpdate=true;
 }
 function monitor(x,y,z,width,height,texture){
  box(V(x,2.18,z),[.78,.06,.48],m.dark,.035);rod(V(x,2.2,z),V(x,y-.2,z),.065,m.steel);
@@ -86,7 +102,15 @@ function monitor(x,y,z,width,height,texture){
 monitor(.80,3.39,-1.08,3.30,2.065,codeTexture);
 const termCanvas=document.createElement('canvas');termCanvas.width=540;termCanvas.height=800;
 const tc=termCanvas.getContext('2d'),termTexture=new THREE.CanvasTexture(termCanvas);termTexture.colorSpace=THREE.SRGBColorSpace;
-function terminal(t){tc.fillStyle='#132326';tc.fillRect(0,0,540,800);tc.fillStyle='#24383c';tc.fillRect(0,0,540,66);tc.font='30px Menlo, monospace';tc.fillStyle='#b7cdc6';tc.fillText('TERMINAL',30,43);const lines=['$ git status','on branch main','','$ npm run dev','> starting…','','✓ server ready','✓ 200 OK','','localhost:3000'];tc.font='28px Menlo, monospace';lines.forEach((line,i)=>{tc.fillStyle=i===6||i===7?'#9edab7':'#a7c7c1';tc.fillText(line,28,119+i*48);});tc.fillStyle='#233f39';tc.fillRect(30,667,480,22);tc.fillStyle='#89cda6';tc.fillRect(30,667,420+24*Math.sin(t*Math.PI/4),22);tc.font='24px Menlo, monospace';tc.fillText('BUILD PASSING',30,736);termTexture.needsUpdate=true;}
+function terminal(t){
+ const state=screenState(t);tc.fillStyle='#091317';tc.fillRect(0,0,540,800);
+ if(state.wake<.001){tc.fillStyle='#253b3d';tc.beginPath();tc.arc(270,400,10,0,Math.PI*2);tc.fill();termTexture.needsUpdate=true;return;}
+ tc.save();tc.globalAlpha=state.wake;tc.fillStyle='#132326';tc.fillRect(0,0,540,800);tc.fillStyle='#24383c';tc.fillRect(0,0,540,66);tc.font='30px Menlo,monospace';tc.fillStyle='#b7cdc6';tc.fillText('TERMINAL',30,43);
+ const lines=[['$ git status',4.9],['on branch main',5.3],['watching files…',5.8],['workshop.ts saved',9.35],['$ npm run build',9.4],['> checking types',9.6],['> bundling app',9.95],['✓ tests passed',10.25],['✓ build complete',10.45]];
+ tc.font='27px Menlo,monospace';lines.forEach(([line,time],i)=>{if(t>=time){tc.globalAlpha=state.wake*smooth(time,time+.12,t);tc.fillStyle=line.startsWith('✓')?'#9edab7':'#a7c7c1';tc.fillText(line,28,119+i*53);}});tc.globalAlpha=state.wake;
+ tc.fillStyle='#233f39';tc.fillRect(30,659,480,25);tc.fillStyle='#89cda6';tc.fillRect(30,659,480*state.build,25);tc.font='24px Menlo,monospace';tc.fillStyle='#a4dfb9';tc.fillText(state.done?'READY TO SHIP':t>=9.4?'BUILDING…':'WAITING FOR CODE',30,736);
+ tc.restore();termTexture.needsUpdate=true;
+}
 monitor(-1.77,3.35,-1.16,1.18,1.75,termTexture);
 // Mechanical keyboard, mouse and notebook, with subdued key movement.
 box(V(-.40,2.16,.38),[1.6,.065,.57],m.black,.035);const keys=[];
@@ -113,33 +137,27 @@ box(V(2.77,2.50,-1.08),[.29,.68,.32],m.dark,.035);for(const y of [2.37,2.63]){co
 const plant=V(-3.05,.065,.13);rod(plant,plant.clone().add(V(0,.47,0)),.29,mat('#b1a18a'),scene,.33);
 rod(plant.clone().add(V(0,.474,0)),plant.clone().add(V(0,.48,0)),.29,mat('#52493b'));
 for(let j=0;j<11;j++){const angle=j*2.399,tip=plant.clone().add(V(.29*Math.cos(angle),.73+.045*j,.29*Math.sin(angle)));rod(plant.clone().add(V(0,.48,0)),tip,.013,m.green);const leaf=ellipsoid(tip,[.073,.24,.026],mat(j%2?'#6baa7e':'#8bbb8d'));leaf.rotation.z=.4*Math.cos(angle);leaf.rotation.y=-angle;}
-// The seated character uses a single coordinate frame and fixed-length limbs.
-const body=V(-.55,1.78,1.00),F=V(.78,0,-.626).normalize(),R=V(-F.z,0,F.x),UP=V(0,1,0);
-const local=(r,y,f)=>body.clone().addScaledVector(R,r).addScaledVector(UP,y).addScaledVector(F,f);
-const yaw=Math.atan2(F.x,F.z);
-function localBox(pos,size,material,r=.04){const o=box(pos,size,material,r);o.rotation.y=yaw;return o;}
-// Upholstered chair, stitched backrest, wheels, and the same seated proportions.
-localBox(local(0,-.20,-.055),[.88,.18,.80],m.dark,.075);
-localBox(local(0,.27,-.39),[.86,1.08,.16],m.dark,.075);
-localBox(local(0,.27,-.477),[.74,.89,.035],mat('#465163'),.045);
-for(const sign of [-1,1])localBox(local(sign*.32,.27,-.500),[.014,.73,.010],m.orange,.005);
-rod(V(body.x,.35,body.z),local(0,-.25,-.04),.068,m.steel);
-for(let j=0;j<5;j++){const angle=j*Math.PI*2/5,end=V(body.x+.64*Math.cos(angle),.16,body.z+.64*Math.sin(angle));capsule(V(body.x,.34,body.z),end,.044,m.edge);const wheel=rod(end.clone().add(V(-.038,0,0)),end.clone().add(V(.038,0,0)),.092,m.dark);}
-for(const sign of [-1,1]){
- const hip=local(sign*.20,-.02,.03),knee=local(sign*.23,-.47,.54),ankle=local(sign*.23,-1.50,.71);
- capsule(hip,knee,.16,m.pants);ellipsoid(knee,[.145,.15,.145],m.pants);capsule(knee,ankle,.125,m.pants);
- localBox(ankle.clone().addScaledVector(F,.095).add(V(0,-.008,0)),[.29,.17,.47],m.shoe,.07);
- localBox(ankle.clone().addScaledVector(F,.095).add(V(0,-.081,0)),[.30,.041,.48],m.edge,.019);
-}
-const hips=ellipsoid(local(0,-.06,.09),[.33,.16,.28],m.pants);hips.rotation.y=yaw;
-const hem=ellipsoid(local(0,.005,0),[.31,.065,.25],m.hood);hem.rotation.y=yaw;
-const torso=ellipsoid(local(0,.36,0),[.39,.52,.29],m.orange);torso.rotation.y=yaw;
-const shoulders=ellipsoid(local(0,.68,.02),[.43,.24,.29],m.orange);shoulders.rotation.y=yaw;
-const hood=ellipsoid(local(0,.82,-.12),[.29,.17,.29],m.hood);hood.rotation.y=yaw;
-rod(local(0,.84,.01),local(0,1.04,.02),.105,m.skin);
-for(const sign of [-1,1])capsule(local(sign*.09,.76,.278),local(sign*.10,.49,.289),.012,m.shoe);
+// An articulated character and independent rolling chair.
+const UP=V(0,1,0),F=V(.78,0,-.626).normalize(),R=V(-F.z,0,F.x),seat=V(-.42,1.43,1.32),yaw=Math.atan2(F.x,F.z);
+const actor=new THREE.Group();scene.add(actor);
+const chair=new THREE.Group();scene.add(chair);chair.rotation.y=yaw;
+function chairBox(position,size,material,r=.04){return box(position,size,material,r,chair);}
+chairBox(V(0,1.21,-.055),[.88,.18,.80],m.dark,.075);
+chairBox(V(0,1.70,-.40),[.86,1.08,.16],m.dark,.075);
+chairBox(V(0,1.70,-.487),[.74,.89,.035],mat('#465163'),.045);
+for(const sign of [-1,1])chairBox(V(sign*.32,1.70,-.51),[.014,.73,.01],m.orange,.005);
+rod(V(0,.35,0),V(0,1.15,0),.068,m.steel,chair);
+const wheels=[];
+for(let j=0;j<5;j++){const angle=j*Math.PI*2/5,end=V(.64*Math.cos(angle),.16,.64*Math.sin(angle));capsule(V(0,.34,0),end,.044,m.edge,chair);wheels.push(rod(end.clone().add(V(-.038,0,0)),end.clone().add(V(.038,0,0)),.092,m.dark,chair));}
+ellipsoid(V(0,-.035,.025),[.33,.16,.26],m.pants,actor);
+ellipsoid(V(0,.01,0),[.31,.065,.25],m.hood,actor);
+const torso=ellipsoid(V(0,.47,0),[.39,.60,.29],m.orange,actor);
+const shoulders=ellipsoid(V(0,.85,.02),[.43,.24,.29],m.orange,actor);
+ellipsoid(V(0,1.01,-.12),[.29,.17,.29],m.hood,actor);
+rod(V(0,1.00,.01),V(0,1.23,.025),.105,m.skin,actor);
+for(const sign of [-1,1])capsule(V(sign*.09,.95,.278),V(sign*.10,.67,.296),.012,m.shoe,actor);
 // Head, sculpted hairline, ears, nose, glasses, and eyelids.
-const head=new THREE.Group();head.position.copy(local(0,1.27,.055));head.rotation.y=yaw+.12;scene.add(head);
+const head=new THREE.Group();head.position.set(0,1.47,.055);actor.add(head);
 ellipsoid(V(),[.295,.355,.285],m.skin,head);
 for(const sign of [-1,1]){ellipsoid(V(sign*.295,-.015,0),[.055,.083,.045],m.skin,head);ellipsoid(V(sign*.308,-.019,.012),[.02,.042,.02],mat('#bf8869'),head);}
 const hairPositions=[],hairIndices=[],hr=22,hs=48;
@@ -152,26 +170,79 @@ const eyes=[];
 for(const sign of [-1,1]){const eye=ellipsoid(V(sign*.108,.025,.266),[.025,.033,.019],m.hair,head);eyes.push(eye);const glass=torus(V(sign*.109,.028,.291),.070,.009,m.dark,head);glass.scale.y=.87;capsule(V(sign*.109-.042,.097,.264),V(sign*.109+.036,.105,.271),.009,m.hair,head);capsule(V(sign*.170,.028,.282),V(sign*.274,.032,.015),.009,m.dark,head);}
 capsule(V(-.035,.037,.30),V(.035,.037,.30),.008,m.dark,head);
 capsule(V(-.045,-.141,.258),V(.044,-.138,.262),.009,mat('#a86e59'),head);
-// Two-bone inverse kinematics keeps elbows joined and prevents stretched arms.
-const arms=[];
-for(const sign of [-1,1]){const upper=mesh(new THREE.CapsuleGeometry(.115,.62-.23,10,24),m.orange,V());const lower=mesh(new THREE.CapsuleGeometry(.088,.62-.176,10,24),m.orange,V());const elbow=ellipsoid(V(),[.112,.112,.112],m.orange);const cuff=ellipsoid(V(),[.088,.084,.088],m.hood);const hand=new THREE.Group();scene.add(hand);ellipsoid(V(0,0,.025),[.079,.047,.095],m.skin,hand);for(let j=0;j<4;j++)capsule(V((j-1.5)*.031,-.005,.08),V((j-1.5)*.031,-.012,.145-Math.abs(j-1.5)*.012),.013,m.skin,hand);capsule(V(-sign*.066,-.009,.008),V(-sign*.101,-.017,.075),.018,m.skin,hand);arms.push({sign,upper,lower,elbow,cuff,hand});}
-function orientSegment(object,a,b){object.position.copy(a).add(b).multiplyScalar(.5);object.quaternion.setFromUnitVectors(UP,b.clone().sub(a).normalize());}
-function solveArm(shoulder,target,sign){const vector=target.clone().sub(shoulder),distance=THREE.MathUtils.clamp(vector.length(),.12,1.235),direction=vector.normalize();const wrist=shoulder.clone().addScaledVector(direction,distance);const mid=shoulder.clone().addScaledVector(direction,distance/2);const pole=R.clone().multiplyScalar(sign).addScaledVector(UP,-.5);pole.addScaledVector(direction,-pole.dot(direction)).normalize();const height=Math.sqrt(.62*.62-distance*distance/4);return {wrist,elbow:mid.addScaledVector(pole,height)};}
-let exporting=false, start=performance.now();
-function animate(t){
- const phase=t*Math.PI*2/LOOP,breathe=.007*Math.sin(phase*2);torso.position.y=body.y+.36+breathe;shoulders.position.y=body.y+.68+breathe;
- const mouseMix=t>3.0&&t<5.0?Math.sin((t-3)*Math.PI/2)**2:0;
- head.position.copy(local(0,1.27+breathe,.055));head.rotation.y=yaw+.12+.06*Math.sin(phase)-.025*mouseMix;head.rotation.z=.025*Math.sin(phase);
- const blink=1-.94*Math.exp(-(((t-2.48)/.065)**2))-.94*Math.exp(-(((t-6.12)/.065)**2));eyes.forEach(e=>e.scale.y=.033*blink);
- for(const a of arms){const shoulder=local(a.sign*.34,.69+breathe,.06),target=V(-.43+a.sign*.24,2.26+.014*Math.sin(t*Math.PI*2*2.5+a.sign),.43+a.sign*.025);if(a.sign===1)target.lerp(V(.67,2.26,.58),mouseMix);const joints=solveArm(shoulder,target,a.sign);orientSegment(a.upper,shoulder,joints.elbow);orientSegment(a.lower,joints.elbow,joints.wrist);a.elbow.position.copy(joints.elbow);a.cuff.position.copy(joints.wrist).lerp(joints.elbow,.10);a.hand.position.copy(joints.wrist);a.hand.quaternion.setFromUnitVectors(V(0,0,1),joints.wrist.clone().sub(joints.elbow).normalize());a.hand.rotateX(.08*Math.sin(t*Math.PI*5+a.sign)*(1-mouseMix));}
- keys.forEach((k,i)=>{k.position.y=2.208-.009*(.5+.5*Math.sin(t*Math.PI*5+i*.7))*(i%9===0?1:0);});
- steam.forEach((s,j)=>{const rise=(t/2+j/3)%1;s.position.set(1.91+.023*Math.sin(phase*2+j),2.5+rise*.20,.32);s.scale.set(1,1+rise*.35,1);s.material.opacity=.12*Math.sin(rise*Math.PI);s.rotation.z=.09*Math.sin(phase+j);});
- fans.forEach((fan,j)=>{fan.rotation.z=phase*16+j;});editor(t);terminal(t);renderer.render(scene,camera);
+
+function limb(length,radius,material){return mesh(new THREE.CapsuleGeometry(radius,length-2*radius,10,24),material,V(),actor);}
+const arms=[],legs=[];
+for(const sign of [-1,1]){
+ const hand=new THREE.Group();actor.add(hand);ellipsoid(V(0,0,.025),[.079,.047,.095],m.skin,hand);
+ for(let j=0;j<4;j++)capsule(V((j-1.5)*.031,-.005,.08),V((j-1.5)*.031,-.012,.145-Math.abs(j-1.5)*.012),.013,m.skin,hand);
+ capsule(V(-sign*.066,-.009,.008),V(-sign*.101,-.017,.075),.018,m.skin,hand);
+ arms.push({sign,upper:limb(.62,.115,m.orange),lower:limb(.62,.088,m.orange),elbow:ellipsoid(V(),[.112,.112,.112],m.orange,actor),hand,cuff:ellipsoid(V(),[.088,.084,.088],m.hood,actor)});
+ const shoe=new THREE.Group();actor.add(shoe);box(V(0,0,.085),[.29,.17,.45],m.shoe,.07,shoe);box(V(0,-.079,.085),[.30,.041,.46],m.edge,.018,shoe);
+ legs.push({sign,upper:limb(.76,.155,m.pants),lower:limb(.94,.12,m.pants),knee:ellipsoid(V(),[.14,.14,.14],m.pants,actor),shoe});
 }
-function tick(){if(!exporting)animate(((performance.now()-start)/1000)%LOOP);requestAnimationFrame(tick);}
-animate(.48);tick();status.textContent='Ready · 1600 × 1024 · 25 fps';
+function orientSegment(object,a,b){object.position.copy(a).add(b).multiplyScalar(.5);object.quaternion.setFromUnitVectors(UP,b.clone().sub(a).normalize());}
+function ik(root,target,l1,l2,pole){
+ const direction=target.clone().sub(root);const d=THREE.MathUtils.clamp(direction.length(),Math.abs(l1-l2)+.001,l1+l2-.002);direction.normalize();
+ const end=root.clone().addScaledVector(direction,d),along=(l1*l1-l2*l2+d*d)/(2*d),height=Math.sqrt(Math.max(0,l1*l1-along*along));
+ const bend=pole.clone().addScaledVector(direction,-pole.dot(direction)).normalize();return {end,joint:root.clone().addScaledVector(direction,along).addScaledVector(bend,height)};
+}
+const angleMix=(a,b,u)=>a+Math.atan2(Math.sin(b-a),Math.cos(b-a))*u;
+const approach=new THREE.CatmullRomCurve3([V(8.5,0,2.30),V(3.2,0,2.30),V(.75,0,2.15),V(seat.x,0,seat.z)],false,'centripetal');
+const pathLength=approach.getLength();
+function travel(p){if(p<.15)return (p/2-.15*Math.sin(Math.PI*p/.15)/(2*Math.PI))/.85;if(p>.85)return 1-travel(1-p);return (p-.075)/.85;}
+function story(t){
+ const entering=t<2.8,leaving=t>=13.2;
+ let root=seat.clone(),turn=yaw,sit=0,walk=0,stride=0,roll=0;
+ if(entering||leaving){
+  const p=entering?THREE.MathUtils.clamp((t-.3)/2.5,0,1):1-THREE.MathUtils.clamp((t-13.2)/2.5,0,1);
+  // Arc-length parameterization keeps the stride speed consistent along the curve.
+  const u=travel(p),point=approach.getPointAt(u),tangent=approach.getTangentAt(u).multiplyScalar(entering?1:-1);
+  root.copy(point);root.y=1.88;turn=Math.atan2(tangent.x,tangent.z);
+  walk=smooth(0,.12,p)*(1-smooth(.88,1,p));root.y-=.10*walk;stride=u*pathLength/2.2*Math.PI*2*(entering?1:-1);
+ }else if(t<3.3){root.y=1.88;const tangent=approach.getTangentAt(1);turn=angleMix(Math.atan2(tangent.x,tangent.z),yaw,smooth(2.8,3.3,t));}
+ else if(t<4.2){sit=smooth(3.3,4.2,t);root.addScaledVector(F,-.6*sit);root.y=THREE.MathUtils.lerp(1.88,seat.y,sit);}
+ else if(t<11.4){sit=1;roll=smooth(4.2,4.7,t);root.addScaledVector(F,-.6*(1-roll));}
+ else if(t<11.9){sit=1;roll=1-smooth(11.4,11.9,t);root.addScaledVector(F,-.6*(1-roll));}
+ else if(t<12.7){sit=1-smooth(11.9,12.7,t);root.addScaledVector(F,-.6*sit);root.y=THREE.MathUtils.lerp(1.88,seat.y,sit);}
+ else{root.y=1.88;const tangent=approach.getTangentAt(1).negate();turn=angleMix(yaw,Math.atan2(tangent.x,tangent.z),smooth(12.7,13.2,t));}
+ return {root,turn,sit,walk,stride,roll};
+}
+let exporting=false,playing=true,start=performance.now(),selectedTime=7;
+function animate(t){
+ const pose=story(t),phase=t*Math.PI*2/LOOP,coding=smooth(4.65,5.15,t)*(1-smooth(9.35,9.6,t)),celebrate=smooth(10.45,10.75,t)*(1-smooth(11.05,11.35,t));
+ actor.visible=t>.3&&t<15.7;actor.position.copy(pose.root);actor.position.y+=pose.walk*.005*(1-Math.cos(pose.stride*2));actor.rotation.set(0,pose.turn,pose.walk*.022*Math.sin(pose.stride));
+ actor.updateMatrixWorld(true);
+ const chairOffset=t<3.3?-.6:t<4.2?-.6:t<11.4?-.6*(1-pose.roll):t<11.9?-.6*(1-pose.roll):-.6;
+ chair.position.copy(seat).addScaledVector(F,chairOffset);chair.position.y=0;
+ const breath=.006*Math.sin(t*Math.PI*1.5);torso.scale.y=.60+breath;head.rotation.set(.025*Math.sin(t*Math.PI*1.4)*coding+.10*celebrate,.10+.06*Math.sin(t*Math.PI*.5)*pose.sit,.018*Math.sin(pose.stride)*pose.walk);
+ const blink=1-.94*Math.exp(-(((t-6.25)/.075)**2))-.94*Math.exp(-(((t-10.6)/.075)**2));eyes.forEach(e=>e.scale.y=.033*blink);
+ for(const leg of legs){
+  const step=Math.sin(pose.stride+(leg.sign<0?Math.PI:0)),lift=Math.max(0,Math.cos(pose.stride+(leg.sign<0?Math.PI:0)));
+  const standing=V(leg.sign*.21,.17-actor.position.y+pose.walk*.17*lift,pose.walk*.55*step);
+  const seated=V(leg.sign*.23,.17-actor.position.y,.82);
+  const foot=standing.lerp(seated,pose.sit),hip=V(leg.sign*.20,-.02,.025),joints=ik(hip,foot,.76,.94,V(0,0,1));
+  orientSegment(leg.upper,hip,joints.joint);orientSegment(leg.lower,joints.joint,joints.end);leg.knee.position.copy(joints.joint);leg.shoe.position.copy(joints.end);leg.shoe.rotation.x=-pose.walk*.20*step*lift;
+ }
+ const ready=smooth(4.3,4.95,t)*(1-smooth(11.35,11.8,t));
+ for(const arm of arms){
+  const shoulder=V(arm.sign*.34,.86,.06),swing=Math.sin(pose.stride+(arm.sign>0?Math.PI:0));
+  let target=V(arm.sign*.46,-.22,pose.walk*.32*swing+.11);
+  const typingWorld=V(-.43-arm.sign*.24,2.26+.026*Math.sin(t*Math.PI*7+arm.sign)*coding,.44-arm.sign*.025+.018*Math.cos(t*Math.PI*5+arm.sign)*coding);
+  const typing=actor.worldToLocal(typingWorld);target.lerp(typing,ready);
+  if(arm.sign===-1)target.lerp(V(-.54,1.50,.38),celebrate);
+  const joints=ik(shoulder,target,.62,.62,V(arm.sign,THREE.MathUtils.lerp(-.5,-.03,ready),.10));orientSegment(arm.upper,shoulder,joints.joint);orientSegment(arm.lower,joints.joint,joints.end);arm.elbow.position.copy(joints.joint);arm.cuff.position.copy(joints.end).lerp(joints.joint,.1);arm.hand.position.copy(joints.end);arm.hand.quaternion.setFromUnitVectors(V(0,0,1),joints.end.clone().sub(joints.joint).normalize());
+ }
+ keys.forEach((k,i)=>{k.position.y=2.208-.015*coding*(.5+.5*Math.sin(t*Math.PI*7+i*.71))*(i%5===0?1:0);});
+ steam.forEach((s,j)=>{const rise=(t/2+j/3)%1;s.position.set(1.91+.023*Math.sin(phase*4+j),2.5+rise*.20,.32);s.scale.set(1,1+rise*.35,1);s.material.opacity=.12*Math.sin(rise*Math.PI);s.rotation.z=.10*Math.sin(phase*2+j);});
+ fans.forEach((fan,j)=>{fan.rotation.z=phase*12+j;});editor(t);terminal(t);renderer.render(scene,camera);
+}
+function tick(){if(!exporting&&playing){selectedTime=((performance.now()-start)/1000)%LOOP;animate(selectedTime);}requestAnimationFrame(tick);}
+animate(selectedTime);tick();status.textContent='Ready · 1600 × 1024 · 50 fps · 16-second story';
 const blob=()=>new Promise(resolve=>renderer.domElement.toBlob(resolve,'image/png'));
 async function send(url,body){const response=await fetch(url,{method:'POST',body});if(!response.ok)throw new Error(await response.text());}
-document.querySelector('#preview').onclick=async()=>{exporting=true;animate(.48);await send('/preview',await blob());status.textContent='Still preview saved';exporting=false;};
-document.querySelector('#render').onclick=async()=>{exporting=true;document.querySelectorAll('button').forEach(b=>b.disabled=true);try{for(let i=0;i<N;i++){animate(i/25);await send(`/frame/${String(i).padStart(3,'0')}`,await blob());status.textContent=`Rendering ${i+1} / ${N}`;}status.textContent='Assembling animation…';await send('/finish',new Uint8Array());status.textContent='Saved · 1600 × 1024 · 200 frames · 25 fps';}catch(error){status.textContent=error.message;}finally{exporting=false;start=performance.now();document.querySelectorAll('button').forEach(b=>b.disabled=false);}};
+document.querySelector('#time').oninput=e=>{playing=false;selectedTime=Number(e.target.value);animate(selectedTime);document.querySelector('#play').textContent='Play preview';status.textContent=selectedTime.toFixed(2)+' seconds';};
+document.querySelector('#play').onclick=()=>{playing=!playing;start=performance.now()-selectedTime*1000;document.querySelector('#play').textContent=playing?'Pause preview':'Play preview';};
+document.querySelector('#preview').onclick=async()=>{exporting=true;animate(selectedTime);await send('/preview',await blob());status.textContent='Still preview saved';exporting=false;};
+document.querySelector('#render').onclick=async()=>{exporting=true;document.querySelectorAll('button,input').forEach(b=>b.disabled=true);try{for(let i=0;i<N;i++){animate(i/FPS);await send(`/frame/${String(i).padStart(3,'0')}`,await blob());status.textContent=`Rendering ${i+1} / ${N}`;}status.textContent='Assembling animation…';await send('/finish',new Uint8Array());status.textContent='Saved · 1600 × 1024 · 800 frames · 50 fps';}catch(error){status.textContent=error.message;}finally{exporting=false;start=performance.now();document.querySelectorAll('button,input').forEach(b=>b.disabled=false);}};
 </script></body></html>

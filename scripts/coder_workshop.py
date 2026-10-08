@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Serve the Three.js workshop renderer and assemble GitHub-safe animated media.
 
-Requires Pillow and Three.js 0.180.0. Install Three.js in a temporary directory
+Requires Pillow 12.x and Three.js 0.180.0. Install Three.js in a temporary directory
 with npm, then pass its node_modules/three directory as --three. Open the printed
 local URL and use Render animation. Controls belong to this authoring page only;
 the exported README media contains no controls, scripts, or external requests.
@@ -14,51 +14,57 @@ import tempfile
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 
-from PIL import Image
+from PIL import Image, _webp
 
 ROOT = Path(__file__).resolve().parents[1]
-WIDTH, HEIGHT, FRAMES, DURATION_MS = 1600, 1024, 200, 40
+WIDTH, HEIGHT, FRAMES, DURATION_MS = 1600, 1024, 800, 20
+
+
+def encode_webp(paths):
+    # Full-colour WebP preserves the rounded lighting; GIF is a universal fallback.
+    # Stream frames into Pillow's WebP encoder rather than keeping 800 RGB images
+    # in memory. This follows the encoder interface used by WebPImagePlugin.
+    encoder = _webp.WebPAnimEncoder((WIDTH, HEIGHT), 0xFF101720, 0, True, 3, 5, False, False)
+    for index, path in enumerate(paths):
+        with Image.open(path) as image:
+            frame = image.convert('RGBX')
+            encoder.add(frame.getim(), index * DURATION_MS, False, 84, 100, 4)
+        if index % 100 == 0:
+            print(f'Encoded {index}/{FRAMES} full-colour frames', flush=True)
+    encoder.add(None, FRAMES * DURATION_MS, False, 84, 100, 0)
+    webp = ROOT / 'assets/coder-workshop.webp'
+    webp.write_bytes(encoder.assemble('', '', ''))
+    with Image.open(webp) as image:
+        assert image.size == (WIDTH, HEIGHT) and image.n_frames == FRAMES
+    return webp
 
 
 def assemble(directory):
     paths = [directory / f'{i:03}.png' for i in range(FRAMES)]
     if not all(path.is_file() for path in paths):
         raise ValueError('Missing rendered frames')
-    # Full-colour WebP preserves the rounded lighting; GIF is a universal fallback.
-    rendered = []
-    for path in paths:
-        with Image.open(path) as image:
-            rendered.append(image.convert('RGB'))
-    webp = ROOT / 'assets/coder-workshop.webp'
-    rendered[0].save(webp, save_all=True, append_images=rendered[1:],
-                     duration=DURATION_MS, loop=0, quality=94, method=3,
-                     minimize_size=True)
-    for image in rendered:
-        image.close()
-    del rendered
-    with Image.open(webp) as image:
-        assert image.size == (WIDTH, HEIGHT) and image.n_frames == FRAMES
+    webp = encode_webp(paths)
     # One palette for the whole loop keeps stationary surfaces from flickering.
     atlas = Image.new('RGB', (800, 512 * 5))
-    for row, index in enumerate((0, 40, 80, 120, 160)):
+    for row, index in enumerate((75, 175, 300, 450, 550)):
         with Image.open(paths[index]) as image:
             atlas.paste(image.convert('RGB').resize((800, 512)), (0, row * 512))
     palette = atlas.quantize(colors=256, method=Image.Quantize.MEDIANCUT)
     indexed = []
-    for path in paths:
+    for path in paths[::2]:
         with Image.open(path) as image:
             indexed.append(image.convert('RGB').quantize(palette=palette, dither=Image.Dither.NONE))
     output = ROOT / 'assets/coder-workshop.gif'
     indexed[0].save(output, save_all=True, append_images=indexed[1:],
-                    duration=DURATION_MS, loop=0, optimize=True, disposal=1)
-    with Image.open(paths[12]) as image:
+                    duration=DURATION_MS * 2, loop=0, optimize=True, disposal=1)
+    with Image.open(paths[440]) as image:
         image.convert('RGB').save(ROOT / 'assets/coder-workshop.png', optimize=True)
     with Image.open(output) as image:
         assert image.size == (WIDTH, HEIGHT)
-        assert image.n_frames == FRAMES
+        assert image.n_frames == FRAMES // 2
         assert image.info['loop'] == 0
-    print(f'Exported {WIDTH}x{HEIGHT}, {FRAMES} frames, 25 fps, '
-          f'8-second loop, WebP {webp.stat().st_size:,} bytes, '
+    print(f'Exported {WIDTH}x{HEIGHT}, {FRAMES} frames, 50 fps, '
+          f'16-second story, WebP {webp.stat().st_size:,} bytes, '
           f'GIF fallback {output.stat().st_size:,} bytes', flush=True)
 
 
