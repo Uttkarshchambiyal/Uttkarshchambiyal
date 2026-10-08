@@ -61,7 +61,8 @@ open_to:
 
 ---
 
-<h3 align="center"><code>&gt; tech --stack</code></h3>
+<a name="--tech---stack"></a>
+<h3 align="center"><img src="assets/tech-stack-heading.svg" alt="&gt; tech --stack" width="100%" /></h3>
 
 <div align="center">
   <img src="assets/tech-stack-updated.svg" alt="Scrolling tech stack — Languages: Java, C++, C, JavaScript, HTML, CSS. Design and tools: Figma, Git, GitHub, GitLab, VS Code, Bootstrap, Claude, Codex, IntelliJ IDEA, PyCharm, DataGrip. Currently learning: React, Node.js, MongoDB, Spring Boot, SwiftUI." width="100%" />
@@ -69,7 +70,8 @@ open_to:
 
 ---
 
-### `> cp --platforms`
+<a name="--cp---platforms"></a>
+<h3 align="center"><img src="assets/cp-platforms-heading.svg" alt="&gt; cp --platforms" width="100%" /></h3>
 
 <div align="center">
 
@@ -99,7 +101,8 @@ open_to:
 ---
 
 <!-- CONTRIBUTION-SKYLINE:START -->
-### `> contributions --skyline`
+<a name="--contributions---skyline"></a>
+<h3 align="center"><img src="assets/contributions-heading.svg" alt="&gt; contributions --skyline" width="100%" /></h3>
 
 <div align="center">
   <a href="https://github.com/Uttkarshchambiyal?tab=overview">
