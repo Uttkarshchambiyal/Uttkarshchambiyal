@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Serve the Three.js workshop renderer and assemble its GitHub-safe GIF.
+"""Serve the Three.js workshop renderer and assemble GitHub-safe animated media.
 
 Requires Pillow and Three.js 0.180.0. Install Three.js in a temporary directory
 with npm, then pass its node_modules/three directory as --three. Open the printed
@@ -24,6 +24,20 @@ def assemble(directory):
     paths = [directory / f'{i:03}.png' for i in range(FRAMES)]
     if not all(path.is_file() for path in paths):
         raise ValueError('Missing rendered frames')
+    # Full-colour WebP preserves the rounded lighting; GIF is a universal fallback.
+    rendered = []
+    for path in paths:
+        with Image.open(path) as image:
+            rendered.append(image.convert('RGB'))
+    webp = ROOT / 'assets/coder-workshop.webp'
+    rendered[0].save(webp, save_all=True, append_images=rendered[1:],
+                     duration=DURATION_MS, loop=0, quality=94, method=3,
+                     minimize_size=True)
+    for image in rendered:
+        image.close()
+    del rendered
+    with Image.open(webp) as image:
+        assert image.size == (WIDTH, HEIGHT) and image.n_frames == FRAMES
     # One palette for the whole loop keeps stationary surfaces from flickering.
     atlas = Image.new('RGB', (800, 512 * 5))
     for row, index in enumerate((0, 40, 80, 120, 160)):
@@ -44,7 +58,8 @@ def assemble(directory):
         assert image.n_frames == FRAMES
         assert image.info['loop'] == 0
     print(f'Exported {WIDTH}x{HEIGHT}, {FRAMES} frames, 25 fps, '
-          f'8-second loop, {output.stat().st_size:,} bytes', flush=True)
+          f'8-second loop, WebP {webp.stat().st_size:,} bytes, '
+          f'GIF fallback {output.stat().st_size:,} bytes', flush=True)
 
 
 def main():
