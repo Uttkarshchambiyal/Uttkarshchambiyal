@@ -3,24 +3,6 @@
   <img src="assets/uttkarsh-header-oval.svg" alt="Uttkarsh Chambiyal — personal README header with my portrait" width="100%" />
 </div>
 
-<!-- TYPING - ROLES -->
-<div align="center">
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Comfortaa&size=20&duration=2500&pause=900&color=00D9FF&center=true&vCenter=true&width=700&height=50&lines=B.Tech+CSE+Student+%7C+Semester+2;Frontend+Developer+%7C+DSA+Practitioner;Problem+Solver+%7C+Open+to+Internships+%26+Hackathons)](https://git.io/typing-svg)
-
-</div>
-
-<br/>
-
-<h3 align="center">
-A Passionate Developer and Problem Solver
-&nbsp;<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png" alt="Fire" width="25" height="25" />
-&nbsp;<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="25" height="25" />
-&nbsp;<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Medium-Light%20Skin%20Tone.png" alt="Dev" width="25" height="25" />
-</h3>
-
-<br/>
-
 ---
 
 <img align="right" src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif" width="300" />
