@@ -61,7 +61,7 @@ open_to:
 
 ---
 
-<a name="--tech---stack"></a>
+<a name="-tech---stack"></a>
 <h3 align="center"><img src="assets/tech-stack-heading.svg" alt="&gt; tech --stack" width="100%" /></h3>
 
 <div align="center">
@@ -70,7 +70,7 @@ open_to:
 
 ---
 
-<a name="--cp---platforms"></a>
+<a name="-cp---platforms"></a>
 <h3 align="center"><img src="assets/cp-platforms-heading.svg" alt="&gt; cp --platforms" width="100%" /></h3>
 
 <div align="center">
@@ -101,7 +101,7 @@ open_to:
 ---
 
 <!-- CONTRIBUTION-SKYLINE:START -->
-<a name="--contributions---skyline"></a>
+<a name="-contributions---skyline"></a>
 <h3 align="center"><img src="assets/contributions-heading.svg" alt="&gt; contributions --skyline" width="100%" /></h3>
 
 <div align="center">
