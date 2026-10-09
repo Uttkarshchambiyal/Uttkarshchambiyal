@@ -152,6 +152,20 @@ for(let j=0;j<5;j++){const angle=j*Math.PI*2/5,end=V(.64*Math.cos(angle),.16,.64
 ellipsoid(V(0,-.035,.025),[.33,.16,.26],m.pants,actor);
 ellipsoid(V(0,.01,0),[.31,.065,.25],m.hood,actor);
 const torso=ellipsoid(V(0,.47,0),[.39,.60,.29],m.orange,actor);
+// The name is printed onto the curved hoodie, so it follows the fabric and rig.
+const brandCanvas=document.createElement('canvas');brandCanvas.width=1024;brandCanvas.height=420;
+const brandInk=brandCanvas.getContext('2d');brandInk.textAlign='center';brandInk.font='900 178px Arial, sans-serif';
+brandInk.fillStyle='#fff4df';brandInk.strokeStyle='#7c4328';brandInk.lineWidth=3;
+for(const [name,y] of [['Uttkarsh',178],['Chambiyal',370]]){brandInk.strokeText(name,512,y);brandInk.fillText(name,512,y);}
+const brandTexture=new THREE.CanvasTexture(brandCanvas);brandTexture.colorSpace=THREE.SRGBColorSpace;brandTexture.anisotropy=renderer.capabilities.getMaxAnisotropy();
+const brandVertices=[],brandUV=[],brandIndices=[],brandCols=40,brandRows=16;
+for(let row=0;row<=brandRows;row++)for(let col=0;col<=brandCols;col++){
+ const u=col/brandCols,v=row/brandRows,theta=1.48+(v-.5)*.66,phi=3.13+(.5-u)*1.70;
+ brandVertices.push(1.009*Math.sin(theta)*Math.cos(phi),1.009*Math.cos(theta),1.009*Math.sin(theta)*Math.sin(phi));brandUV.push(u,1-v);
+}
+for(let row=0;row<brandRows;row++)for(let col=0;col<brandCols;col++){const a=row*(brandCols+1)+col,b=a+brandCols+1;brandIndices.push(a,b,a+1,b,b+1,a+1);}
+const brandGeometry=new THREE.BufferGeometry();brandGeometry.setAttribute('position',new THREE.Float32BufferAttribute(brandVertices,3));brandGeometry.setAttribute('uv',new THREE.Float32BufferAttribute(brandUV,2));brandGeometry.setIndex(brandIndices);brandGeometry.computeVertexNormals();
+const hoodiePrint=mesh(brandGeometry,new THREE.MeshBasicMaterial({map:brandTexture,transparent:true,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-2}),V(),torso);hoodiePrint.castShadow=false;hoodiePrint.receiveShadow=false;
 const shoulders=ellipsoid(V(0,.85,.02),[.43,.24,.29],m.orange,actor);
 ellipsoid(V(0,1.01,-.12),[.29,.17,.29],m.hood,actor);
 rod(V(0,1.00,.01),V(0,1.23,.025),.105,m.skin,actor);
