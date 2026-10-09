@@ -32,7 +32,7 @@ def encode_webp(paths):
         if index % 100 == 0:
             print(f'Encoded {index}/{FRAMES} full-colour frames', flush=True)
     encoder.add(None, FRAMES * DURATION_MS, False, 84, 100, 0)
-    webp = ROOT / 'assets/coder-workshop-branded.webp'
+    webp = ROOT / 'assets/coder-workshop-backprint.webp'
     webp.write_bytes(encoder.assemble('', '', ''))
     with Image.open(webp) as image:
         assert image.size == (WIDTH, HEIGHT) and image.n_frames == FRAMES
@@ -54,11 +54,11 @@ def assemble(directory):
     for path in paths[::2]:
         with Image.open(path) as image:
             indexed.append(image.convert('RGB').quantize(palette=palette, dither=Image.Dither.NONE))
-    output = ROOT / 'assets/coder-workshop-branded.gif'
+    output = ROOT / 'assets/coder-workshop-backprint.gif'
     indexed[0].save(output, save_all=True, append_images=indexed[1:],
                     duration=DURATION_MS * 2, loop=0, optimize=True, disposal=1)
-    with Image.open(paths[440]) as image:
-        image.convert('RGB').save(ROOT / 'assets/coder-workshop-branded.png', optimize=True)
+    with Image.open(paths[120]) as image:
+        image.convert('RGB').save(ROOT / 'assets/coder-workshop-backprint.png', optimize=True)
     with Image.open(output) as image:
         assert image.size == (WIDTH, HEIGHT)
         assert image.n_frames == FRAMES // 2
@@ -72,7 +72,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--three', type=Path, required=True)
     parser.add_argument('--port', type=int, default=8766)
-    parser.add_argument('--preview-output', type=Path, default=ROOT / 'assets/coder-workshop-branded.png')
+    parser.add_argument('--preview-output', type=Path, default=ROOT / 'assets/coder-workshop-backprint.png')
     args = parser.parse_args()
     three = args.three.resolve()
     if not (three / 'build/three.module.js').is_file():

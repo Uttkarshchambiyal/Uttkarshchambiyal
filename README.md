@@ -102,9 +102,9 @@ Passionate about building interactive web experiences, bringing code and creativ
 <!-- CODER-WORKSHOP:START -->
 <div align="center">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/coder-workshop-branded.png" />
-    <source type="image/webp" srcset="assets/coder-workshop-branded.webp" />
-    <img src="assets/coder-workshop-branded.gif" alt="A 3D coder wearing an Uttkarsh Chambiyal branded hoodie walks in from the right, sits down, wakes the monitors, types visible code, celebrates a successful build, and walks away — a smooth 16-second animation with no buttons or controls" width="100%" />
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/coder-workshop-backprint.png" />
+    <source type="image/webp" srcset="assets/coder-workshop-backprint.webp" />
+    <img src="assets/coder-workshop-backprint.gif" alt="A 3D coder wearing a hoodie with black Uttkarsh Chambiyal lettering across the back walks in from the right, sits down, wakes the monitors, types visible code, celebrates a successful build, and walks away — a smooth 16-second animation with no buttons or controls" width="100%" />
   </picture>
 </div>
 <!-- CODER-WORKSHOP:END -->
