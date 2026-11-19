@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><title>Liquid glass README ending</title><style>body{margin:0;background:#0d1117;color:#ced4df;font:14px Arial}canvas{display:block;width:100%;max-width:1400px;margin:20px auto}aside{display:flex;gap:16px;align-items:center;padding:20px;justify-content:center}input{width:300px}button{padding:9px}p{text-align:center;color:#8b949e}</style><canvas id="scene" role="img" aria-label="U logo, followed by Uttkarsh Chambiyal in Apple system typography"></canvas><aside><label>Scene time <input id="time" type="range" min="0" max="9" step="0.02" value="2.8"></label><button id="preview">Save still preview</button><button id="render">Render animation</button><span id="status">Ready</span></aside><p>Authoring controls are excluded from the exported README image.</p><script type="module">// Adapted from the user-supplied liquid-glass-logo-reveal component.
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Liquid glass README ending</title><style>body{margin:0;background:#0d1117;color:#ced4df;font:14px Arial}canvas{display:block;width:100%;max-width:1400px;margin:20px auto}aside{display:flex;gap:16px;align-items:center;padding:20px;justify-content:center}input{width:300px}button{padding:9px}p{text-align:center;color:#8b949e}</style><canvas id="scene" role="img" aria-label="U logo followed by a staggered blur reveal of Uttkarsh Chambiyal"></canvas><aside><label>Scene time <input id="time" type="range" min="0" max="9" step="0.02" value="2.8"></label><button id="preview">Save still preview</button><button id="render">Render animation</button><span id="status">Ready</span></aside><p>Authoring controls are excluded from the exported README image.</p><script type="module">// Adapted from the user-supplied liquid-glass-logo-reveal component.
 // Shader and spring engine: zanwei/glass-icon-reveal (MIT), see assets/licenses/glass-icon-reveal-MIT.txt.
 const LIGHT = {
     tileSize: 256,
@@ -241,6 +241,10 @@ out vec4 outColor;
 
 uniform float uAspect;
 uniform float uContentAlpha;
+uniform float uNameMode;
+uniform float uNameTime;
+uniform float uNameExit;
+uniform float uCharacterCount;
 uniform vec2 uCenter;      // device px, GL coords
 uniform float uTile;       // tile size, device px
 uniform sampler2D uSdf;    // signed distance, texture units, + outside
@@ -311,9 +315,22 @@ vec4 logoAt(vec2 q, float blur, float aa) {
   float L = uLogoHalf;
   float k = 0.5 * uBoxFrac / L;
   vec2 uv = vec2(0.5 + (q.x - uLogoOff.x) * k, 0.5 - (q.y - uLogoOff.y) * k);
+  float reveal = 1.0;
+  if (uNameMode > 0.5) {
+    // Metadata texture: each horizontal band identifies its glyph, including spaces.
+    float index = floor(textureLod(uCol, vec2(uv.x, 0.5), 0.0).r * 255.0 + 0.5);
+    float enter = clamp((uNameTime - index * 0.02) / 0.6, 0.0, 1.0);
+    enter = 1.0 - pow(1.0 - enter, 3.0);
+    float leave = clamp((uNameExit - (uCharacterCount - 1.0 - index) * 0.02) / 0.6, 0.0, 1.0);
+    leave = 1.0 - pow(1.0 - leave, 3.0);
+    reveal = min(enter, 1.0 - leave);
+    // The supplied BlurReveal defaults: 12px blur, 10px rise, 20ms stagger, 600ms segments.
+    uv.y -= 10.0 * (1.0 - reveal) * (2.0 / uTile) * k;
+    blur += 12.0 * (1.0 - reveal) * (2.0 / uTile);
+  }
   float d = texture(uSdf, uv).r / k;
   float w = 0.75 * aa + blur;
-  float a = (1.0 - smoothstep(-w, w, d - uBold * L)) * uContentAlpha;
+  float a = (1.0 - smoothstep(-w, w, d - uBold * L)) * uContentAlpha * reveal;
   vec3 c = uLogoCol;
   if (uUseColor > 0.5) {
     float lod = log2(max(1.0, w * k * uTexSize));
@@ -754,7 +771,14 @@ const nameCanvas=document.createElement('canvas');nameCanvas.width=nameCanvas.he
 const ink=nameCanvas.getContext('2d');ink.translate(TEX/2,TEX/2);ink.scale(1/2.6,1);
 const nameWidth=1740,nameHeight=nameWidth*nameImage.naturalHeight/nameImage.naturalWidth;
 ink.drawImage(nameImage,-nameWidth/2,-nameHeight/2,nameWidth,nameHeight);
-const nameData={canvas:nameCanvas,sdf:buildSdf(nameCanvas)};
+const nameLayout=await (await fetch('/assets/uttkarsh-name-sf-layout.json')).json();
+const characterMap=document.createElement('canvas');characterMap.width=TEX;characterMap.height=1;
+const cx=characterMap.getContext('2d');let left=0;
+nameLayout.boundaries.forEach((end,index)=>{
+ const right=index===nameLayout.characterCount-1?TEX:Math.round(end*TEX);
+ cx.fillStyle=`rgb(${index},0,0)`;cx.fillRect(left,0,right-left,1);left=right;
+});
+const nameData={canvas:characterMap,sdf:buildSdf(nameCanvas)};
 let textureStage='';
 const P={...LOOKS.dark,background:'#0d1117',logoColor:'#f4f6fc',iconPlate:false,keepPlate:true,logoScale:.78,finalScale:1,drift:.025,present:9.5,glide:2.4,startZoom:1.14,bevelWidth:.16,opticalDepth:.65,dispersion:.25,colorBleed:.15,halo:.4,sheen:.55,corner:4.8};
 const FPS=50,N=450,LOOP=9;let playing=true,exporting=false,selected=2.8,start=performance.now();
@@ -765,9 +789,10 @@ function draw(t){
  const expand=smoother(2.1,2.85,t),aspect=1+1.6*expand;
  const fr=frameAt(x,P,out);fr.uAspect=aspect;
  // Logo ends at 2.05s; name begins at 2.9s. The clear gap prevents overlap.
- fr.uContentAlpha=stage==='logo'?1-smoother(1.65,2.05,t):smoother(2.9,3.65,t);
+ fr.uContentAlpha=stage==='logo'?1-smoother(1.65,2.05,t):1;
+ fr.uNameMode=stage==='name'?1:0;fr.uNameTime=t-2.9;fr.uNameExit=t-6.15;fr.uCharacterCount=nameLayout.characterCount;
  fr.uLogoHalf*=stage==='logo'?.52:1;fr.uLogoOff=[0,0];
- const focusBlur=stage==='logo'?.07*smoother(1.65,2.05,t):.055*(1-smoother(2.9,3.65,t));
+ const focusBlur=stage==='logo'?.07*smoother(1.65,2.05,t):0;
  fr.uPlateAlpha*=fade;fr.uBare=0;fr.uBlur+=focusBlur+.11*out;fr.uPlateScale*=1-.15*out;fr.uSheen*=1-out;
  fr.uSweep=mix(-1.6,1.6,smoother(3.8,5.7,t));fr.uFrost+=out*.30;
  renderer.render(fr,1400,520,320);

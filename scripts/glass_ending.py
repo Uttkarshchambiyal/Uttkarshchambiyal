@@ -31,7 +31,7 @@ def encode_webp(paths):
         if index % 100 == 0:
             print(f'Encoded {index}/{FRAMES} full-colour frames', flush=True)
     encoder.add(None, FRAMES * DURATION_MS, False, 84, 100, 0)
-    webp = ROOT / 'assets/glass-apple-sequence.webp'
+    webp = ROOT / 'assets/glass-blur-reveal.webp'
     webp.write_bytes(encoder.assemble('', '', ''))
     with Image.open(webp) as image:
         assert image.size == (WIDTH, HEIGHT) and 1 < image.n_frames <= FRAMES
@@ -53,11 +53,11 @@ def assemble(directory):
     for path in paths[::2]:
         with Image.open(path) as image:
             indexed.append(image.convert('RGB').quantize(palette=palette, dither=Image.Dither.NONE))
-    output = ROOT / 'assets/glass-apple-sequence.gif'
+    output = ROOT / 'assets/glass-blur-reveal.gif'
     indexed[0].save(output, save_all=True, append_images=indexed[1:],
                     duration=DURATION_MS * 2, loop=0, optimize=True, disposal=1)
     with Image.open(paths[245]) as image:
-        image.convert('RGB').save(ROOT / 'assets/glass-apple-sequence.png', optimize=True)
+        image.convert('RGB').save(ROOT / 'assets/glass-blur-reveal.png', optimize=True)
     with Image.open(output) as image:
         assert image.size == (WIDTH, HEIGHT)
         assert 1 < image.n_frames <= FRAMES // 2
@@ -70,7 +70,7 @@ def assemble(directory):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port', type=int, default=8767)
-    parser.add_argument('--preview-output', type=Path, default=ROOT / 'assets/glass-apple-sequence.png')
+    parser.add_argument('--preview-output', type=Path, default=ROOT / 'assets/glass-blur-reveal.png')
     args = parser.parse_args()
     with tempfile.TemporaryDirectory(prefix='glass-ending-') as temporary:
         frames = Path(temporary)
@@ -79,14 +79,14 @@ def main():
             def do_GET(self):
                 if self.path.split('?')[0] == '/':
                     path = ROOT / 'scripts/glass_ending.html'
-                elif self.path.split('?')[0] in ('/assets/uttkarsh-monogram.png', '/assets/uttkarsh-name-sf.svg'):
+                elif self.path.split('?')[0] in ('/assets/uttkarsh-monogram.png', '/assets/uttkarsh-name-sf.svg', '/assets/uttkarsh-name-sf-layout.json'):
                     path = ROOT / self.path.split('?')[0].lstrip('/')
                 else:
                     self.send_error(404); return
                 if not path.is_file():
                     self.send_error(404); return
                 self.send_response(200)
-                self.send_header('Content-Type', {'.html': 'text/html', '.svg': 'image/svg+xml', '.png': 'image/png'}.get(path.suffix, 'text/javascript'))
+                self.send_header('Content-Type', {'.html': 'text/html', '.svg': 'image/svg+xml', '.png': 'image/png', '.json': 'application/json'}.get(path.suffix, 'text/javascript'))
                 self.end_headers(); self.wfile.write(path.read_bytes())
 
             def do_POST(self):

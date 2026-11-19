@@ -115,9 +115,9 @@ Passionate about building interactive web experiences, bringing code and creativ
 <!-- GLASS-ENDING:START -->
 <div align="center">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/glass-apple-sequence.png" />
-    <source type="image/webp" srcset="assets/glass-apple-sequence.webp" />
-    <img src="assets/glass-apple-sequence.gif" alt="Uttkarsh Chambiyal — the U logo appears alone and fades out before the name appears in clean San Francisco typography, catches a glass highlight, and fades away." width="100%" />
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/glass-blur-reveal.png" />
+    <source type="image/webp" srcset="assets/glass-blur-reveal.webp" />
+    <img src="assets/glass-blur-reveal.gif" alt="Uttkarsh Chambiyal — the U logo appears alone, then each letter of the name rises from blur in San Francisco typography, holds sharply in glass, and blurs away in reverse order." width="100%" />
   </picture>
 </div>
 <!-- GLASS-ENDING:END -->
