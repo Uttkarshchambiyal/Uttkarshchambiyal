@@ -104,15 +104,13 @@ Passionate about building interactive web experiences, bringing code and creativ
 <p align="center">A short story of how I design, build, solve, and keep learning.</p>
 
 <div align="center">
-  <a href="assets/uttkarsh-behind-the-code.mp4">
-    <picture>
-      <source media="(prefers-reduced-motion: reduce)" srcset="assets/uttkarsh-behind-the-code.png" />
-      <source type="image/webp" srcset="assets/uttkarsh-behind-the-code.webp" />
-      <img src="assets/uttkarsh-behind-the-code.png" alt="Behind the code — Uttkarsh Chambiyal's 30-second animated story: an introduction, UI/UX design, frontend coding, a 3D binary-search problem, learning Spring Boot and SwiftUI, and building something useful. Six camera angles with readable captions." width="100%" />
-    </picture>
-  </a>
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/uttkarsh-behind-the-code.png" />
+    <source type="image/webp" srcset="assets/uttkarsh-behind-the-code.webp" />
+    <img src="assets/uttkarsh-behind-the-code.png" alt="Behind the code — Uttkarsh Chambiyal's 30-second animated story: an introduction, UI/UX design, frontend coding, a 3D binary-search problem, learning Spring Boot and SwiftUI, and building something useful. Six camera angles with readable captions." width="100%" />
+  </picture>
 </div>
-<p align="center"><a href="assets/uttkarsh-behind-the-code.mp4">Watch the full 30-second film</a></p>
+<p align="center"><a href="https://github.com/Uttkarshchambiyal/Uttkarshchambiyal/raw/refs/heads/main/assets/uttkarsh-behind-the-code.mp4">Download the full 30-second film (MP4)</a></p>
 <!-- PROFILE-FILM:END -->
 
 <!-- GLASS-ENDING:START -->

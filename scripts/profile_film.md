@@ -36,4 +36,4 @@ JPEG to limit disk use; interrupted renders can resume from a saved frame direct
 - PNG: still poster for reduced-motion preferences and fallback browsers.
 
 GitHub READMEs cannot run the Three.js source or autoplay an inline HTML video.
-The README therefore uses an animated image and links to the full MP4.
+The README therefore uses an animated image and offers a direct download of the full MP4.
