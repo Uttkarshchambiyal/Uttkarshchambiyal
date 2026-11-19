@@ -110,7 +110,6 @@ Passionate about building interactive web experiences, bringing code and creativ
     <img src="assets/uttkarsh-behind-the-code.png" alt="Behind the code — Uttkarsh Chambiyal's 30-second animated story: an introduction, UI/UX design, frontend coding, a 3D binary-search problem, learning Spring Boot and SwiftUI, and building something useful. Six camera angles with readable captions." width="100%" />
   </picture>
 </div>
-<p align="center"><a href="https://github.com/Uttkarshchambiyal/Uttkarshchambiyal/raw/refs/heads/main/assets/uttkarsh-behind-the-code.mp4">Download the full 30-second film (MP4)</a></p>
 <!-- PROFILE-FILM:END -->
 
 <!-- GLASS-ENDING:START -->
