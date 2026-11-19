@@ -107,7 +107,7 @@ Passionate about building interactive web experiences, bringing code and creativ
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="assets/uttkarsh-behind-the-code-hd.png" />
     <source type="image/webp" srcset="assets/uttkarsh-behind-the-code-hd.webp" />
-    <img src="assets/uttkarsh-behind-the-code-hd.png" alt="Behind the code — Uttkarsh Chambiyal's 30-second animated story: an introduction, UI/UX design, frontend coding, a 3D binary-search problem, learning Spring Boot and SwiftUI, and building something useful. Six camera angles with readable captions." width="100%" />
+    <img src="assets/uttkarsh-behind-the-code-hd.png" alt="Behind the code — Uttkarsh Chambiyal's 30-second animated story: an introduction, UI/UX design, frontend coding, a 3D binary-search problem, learning Spring Boot and SwiftUI, and building something useful. Six camera angles with readable captions." width="700" />
   </picture>
 </div>
 <!-- PROFILE-FILM:END -->
@@ -117,7 +117,7 @@ Passionate about building interactive web experiences, bringing code and creativ
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="assets/glass-blur-reveal.png" />
     <source type="image/webp" srcset="assets/glass-blur-reveal.webp" />
-    <img src="assets/glass-blur-reveal.gif" alt="Uttkarsh Chambiyal — the U logo appears alone, then each letter of the name rises from blur in San Francisco typography, holds sharply in glass, and blurs away in reverse order." width="100%" />
+    <img src="assets/glass-blur-reveal.gif" alt="Uttkarsh Chambiyal — the U logo appears alone, then each letter of the name rises from blur in San Francisco typography, holds sharply in glass, and blurs away in reverse order." width="560" />
   </picture>
 </div>
 <!-- GLASS-ENDING:END -->
