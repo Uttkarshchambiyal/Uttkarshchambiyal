@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><title>Liquid glass README ending</title><style>body{margin:0;background:#0d1117;color:#ced4df;font:14px Arial}canvas{display:block;width:100%;max-width:1400px;margin:20px auto}aside{display:flex;gap:16px;align-items:center;padding:20px;justify-content:center}input{width:300px}button{padding:9px}p{text-align:center;color:#8b949e}</style><canvas id="scene" role="img" aria-label="Uttkarsh Chambiyal liquid glass ending"></canvas><aside><label>Scene time <input id="time" type="range" min="0" max="8" step="0.02" value="2.8"></label><button id="preview">Save still preview</button><button id="render">Render animation</button><span id="status">Ready</span></aside><p>Authoring controls are excluded from the exported README image.</p><script type="module">// Adapted from the user-supplied liquid-glass-logo-reveal component.
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Liquid glass README ending</title><style>body{margin:0;background:#0d1117;color:#ced4df;font:14px Arial}canvas{display:block;width:100%;max-width:1400px;margin:20px auto}aside{display:flex;gap:16px;align-items:center;padding:20px;justify-content:center}input{width:300px}button{padding:9px}p{text-align:center;color:#8b949e}</style><canvas id="scene" role="img" aria-label="U monogram and Uttkarsh Chambiyal script signature"></canvas><aside><label>Scene time <input id="time" type="range" min="0" max="9" step="0.02" value="2.8"></label><button id="preview">Save still preview</button><button id="render">Render animation</button><span id="status">Ready</span></aside><p>Authoring controls are excluded from the exported README image.</p><script type="module">// Adapted from the user-supplied liquid-glass-logo-reveal component.
 // Shader and spring engine: zanwei/glass-icon-reveal (MIT), see assets/licenses/glass-icon-reveal-MIT.txt.
 const LIGHT = {
     tileSize: 256,
@@ -239,6 +239,8 @@ const FRAG = `#version 300 es
 precision highp float;
 out vec4 outColor;
 
+uniform float uAspect;
+uniform float uWrite;
 uniform vec2 uCenter;      // device px, GL coords
 uniform float uTile;       // tile size, device px
 uniform sampler2D uSdf;    // signed distance, texture units, + outside
@@ -308,10 +310,10 @@ vec2 rot(vec2 v, float a) { float c = cos(a), s = sin(a); return vec2(c * v.x - 
 vec4 logoAt(vec2 q, float blur, float aa) {
   float L = uLogoHalf;
   float k = 0.5 * uBoxFrac / L;
-  vec2 uv = vec2(0.5 + (q.x - uLogoOff.x) * k, 0.5 - (q.y - uLogoOff.y) * k);
+  vec2 uv = vec2(0.5 + (q.x - uLogoOff.x) * k, 0.5 - (q.y - uLogoOff.y) * k * (2.6 / uAspect));
   float d = texture(uSdf, uv).r / k;
   float w = 0.75 * aa + blur;
-  float a = 1.0 - smoothstep(-w, w, d - uBold * L);
+  float a = (1.0 - smoothstep(-w, w, d - uBold * L)) * (1.0 - smoothstep(uWrite - 0.012, uWrite + 0.012, uv.x));
   vec3 c = uLogoCol;
   if (uUseColor > 0.5) {
     float lod = log2(max(1.0, w * k * uTexSize));
@@ -371,7 +373,7 @@ float hash(vec2 p) { return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.545
 void main() {
   px = 2.0 / uTile;
   vec2 p = (gl_FragCoord.xy - uCenter) * px;
-  p.x /= 2.6;
+  p.x /= uAspect;
 
   vec4 lg = logoAt(p, uBlur, px);
   vec3 plain = mix(uBg, lg.rgb, lg.a * uBare);
@@ -737,16 +739,34 @@ function frameAt(T, P, outro = 0) {
 
 const canvas=document.querySelector('#scene');canvas.width=1400;canvas.height=520;
 const renderer=createRenderer(canvas);if(!renderer)throw new Error('WebGL2 is required to render the source effect');
+// The supplied U image is preserved unchanged; the name uses outlined Brush Script MT.
+const suppliedMark=await loadImage('/assets/uttkarsh-monogram.png');
+const markMask=document.createElement('canvas');markMask.width=suppliedMark.naturalWidth;markMask.height=suppliedMark.naturalHeight;
+const mx=markMask.getContext('2d');mx.drawImage(suppliedMark,0,0);
+// Use the supplied light strokes as alpha, keeping the black screenshot background out of the glass.
+const pixels=mx.getImageData(0,0,markMask.width,markMask.height);
+for(let i=0;i<pixels.data.length;i+=4){const coverage=clamp01((pixels.data[i]-5)/233);pixels.data[i]=pixels.data[i+1]=pixels.data[i+2]=255;pixels.data[i+3]=Math.round(255*coverage);}
+mx.putImageData(pixels,0,0);
+const markData={canvas:fitToTexture(markMask,markMask.width,markMask.height)};
+const nameImage=await loadImage('/assets/uttkarsh-signature.svg');
 const logo=document.createElement('canvas');logo.width=logo.height=TEX;
 const ink=logo.getContext('2d');ink.translate(TEX/2,TEX/2);ink.scale(1/2.6,1);
-ink.font='600 150px Arial, sans-serif';ink.textAlign='center';ink.textBaseline='middle';ink.fillStyle='#ffffff';ink.fillText('Uttkarsh Chambiyal',0,0);
+ink.drawImage(markData.canvas,-1040,-152,304,304);
+const nameWidth=1740,nameHeight=nameWidth*nameImage.naturalHeight/nameImage.naturalWidth;
+ink.drawImage(nameImage,-535,-nameHeight/2,nameWidth,nameHeight);
 renderer.setLogo({canvas:logo,sdf:buildSdf(logo)});
-const P={...LOOKS.dark,background:'#0d1117',logoColor:'#f4f6fc',iconPlate:false,keepPlate:true,logoScale:.94,finalScale:1,drift:.025,present:6.8,glide:2.4,startZoom:1.6,bevelWidth:.16,opticalDepth:.85,dispersion:.7,colorBleed:.45,halo:.4,sheen:.8,corner:4.8};
-const FPS=50,N=400,LOOP=8;let playing=true,exporting=false,selected=2.8,start=performance.now();
+const P={...LOOKS.dark,background:'#0d1117',logoColor:'#f4f6fc',iconPlate:false,keepPlate:true,logoScale:.68,finalScale:1,drift:.025,present:9.5,glide:2.4,startZoom:1.14,bevelWidth:.16,opticalDepth:.85,dispersion:.7,colorBleed:.45,halo:.4,sheen:.8,corner:4.8};
+const FPS=50,N=450,LOOP=9;let playing=true,exporting=false,selected=2.8,start=performance.now();
 function draw(t){
- const x=Math.max(0,t-.35),out=smoother(5.3,6.9,t),fade=smoother(.28,.65,t)*(1-out);
- const fr=frameAt(x,P,out);fr.uPlateAlpha*=fade;fr.uBare=0;fr.uBlur+=.11*out;fr.uPlateScale*=1-.18*out;fr.uSheen*=1-out;
- fr.uSweep=mix(-1.6,1.6,smoother(1.9,4.4,t));fr.uFrost+=out*.30;
+ const x=Math.max(0,t-.30),out=smoother(6.15,7.85,t),fade=smoother(.28,.7,t)*(1-out);
+ const expand=smoother(1.8,3.1,t),aspect=1+1.6*expand;
+ const fr=frameAt(x,P,out);fr.uAspect=aspect;fr.uWrite=mix(.255,1,smoother(2.2,4.15,t));
+ fr.uLogoHalf*=2.6/aspect*mix(1.6,1,expand);
+ // Begin with the U centred, then glide it left as the handwritten name is revealed.
+ const markUv=(512-888/2.6)/1024;
+ fr.uLogoOff=[(0.5-markUv)*fr.uLogoHalf/(.5*BOX)*(1-expand),0];
+ fr.uPlateAlpha*=fade;fr.uBare=0;fr.uBlur+=.11*out;fr.uPlateScale*=1-.15*out;fr.uSheen*=1-out;
+ fr.uSweep=mix(-1.6,1.6,smoother(3.7,5.7,t));fr.uFrost+=out*.30;
  renderer.render(fr,1400,520,320);
 }
 function tick(){if(playing&&!exporting){selected=(performance.now()-start)/1000%LOOP;draw(selected);}requestAnimationFrame(tick);}draw(selected);tick();
@@ -755,5 +775,5 @@ time.oninput=()=>{playing=false;selected=Number(time.value);draw(selected);};
 const blob=()=>new Promise(resolve=>canvas.toBlob(resolve,'image/png'));
 async function send(url,body){const r=await fetch(url,{method:'POST',body});if(!r.ok)throw new Error(await r.text());}
 document.querySelector('#preview').onclick=async()=>{playing=false;draw(selected);await send('/preview',await blob());status.textContent='Preview saved';};
-document.querySelector('#render').onclick=async()=>{exporting=true;playing=false;document.querySelectorAll('input,button').forEach(el=>el.disabled=true);try{for(let i=0;i<N;i++){draw(i/FPS);await send('/frame/'+String(i).padStart(3,'0'),await blob());status.textContent='Rendering '+(i+1)+' / '+N;}status.textContent='Assembling animation…';await send('/finish',new Uint8Array());status.textContent='Saved · 8 seconds · 50 fps';}catch(e){status.textContent=e.message;}finally{exporting=false;document.querySelectorAll('input,button').forEach(el=>el.disabled=false);}};
+document.querySelector('#render').onclick=async()=>{exporting=true;playing=false;document.querySelectorAll('input,button').forEach(el=>el.disabled=true);try{for(let i=0;i<N;i++){draw(i/FPS);await send('/frame/'+String(i).padStart(3,'0'),await blob());status.textContent='Rendering '+(i+1)+' / '+N;}status.textContent='Assembling animation…';await send('/finish',new Uint8Array());status.textContent='Saved · 9 seconds · 50 fps';}catch(e){status.textContent=e.message;}finally{exporting=false;document.querySelectorAll('input,button').forEach(el=>el.disabled=false);}};
 </script></html>
