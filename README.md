@@ -105,9 +105,9 @@ Passionate about building interactive web experiences, bringing code and creativ
 
 <div align="center">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/uttkarsh-behind-the-code.png" />
-    <source type="image/webp" srcset="assets/uttkarsh-behind-the-code.webp" />
-    <img src="assets/uttkarsh-behind-the-code.png" alt="Behind the code — Uttkarsh Chambiyal's 30-second animated story: an introduction, UI/UX design, frontend coding, a 3D binary-search problem, learning Spring Boot and SwiftUI, and building something useful. Six camera angles with readable captions." width="100%" />
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/uttkarsh-behind-the-code-hd.png" />
+    <source type="image/webp" srcset="assets/uttkarsh-behind-the-code-hd.webp" />
+    <img src="assets/uttkarsh-behind-the-code-hd.png" alt="Behind the code — Uttkarsh Chambiyal's 30-second animated story: an introduction, UI/UX design, frontend coding, a 3D binary-search problem, learning Spring Boot and SwiftUI, and building something useful. Six camera angles with readable captions." width="100%" />
   </picture>
 </div>
 <!-- PROFILE-FILM:END -->

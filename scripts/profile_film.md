@@ -28,12 +28,17 @@ python3 scripts/profile_film.py --three /path/to/node_modules/three
 
 Open the printed local URL. Scrub and save stills to inspect the shots, then use
 **Render animation**. Exported media contains no authoring controls. The source
-runs locally with no external fonts, images, or services. Temporary frames use
-JPEG to limit disk use; interrupted renders can resume from a saved frame directory.
+runs locally with no external fonts, images, or services. Frames stream directly
+into the encoders so no large temporary frame directory is needed.
 
-- MP4: 1440 × 810, 30 fps, 30 seconds, H.264, silent, fast-start playback.
-- WebP: 768 × 432, 30 fps, 30-second loop for inline GitHub rendering.
-- PNG: still poster for reduced-motion preferences and fallback browsers.
+- Capture: 2880 × 1620, lossless PNG, with antialiasing and 2x screen textures.
+- MP4: 1440 × 810, CRF 16, 30 fps, 30 seconds, H.264, silent, fast-start playback.
+- WebP: native 1440 × 810, quality 90, 30 fps, 30-second loop for the README.
+- PNG: native 1440 × 810 poster for reduced-motion settings and fallback browsers.
 
-GitHub READMEs cannot run the Three.js source or autoplay an inline HTML video.
-The README therefore uses an animated image and offers a direct download of the full MP4.
+The capture is downsampled once from lossless pixels. There is no intermediate
+JPEG compression and no upscaling of a 768px preview. Labels and monitor textures
+are generated at double resolution, with anisotropic filtering for angled screens.
+
+GitHub READMEs cannot run the Three.js source. The README uses the animated WebP;
+the MP4 master is retained as a repository asset without adding a download link.

@@ -12,13 +12,13 @@ body{margin:0;background:#101720;color:#e4e9ef;font:15px system-ui}main{max-widt
 <script type="module">
 import * as THREE from 'three';
 import { RoundedBoxGeometry } from '/vendor/examples/jsm/geometries/RoundedBoxGeometry.js';
-const W=1440,H=810,N=900,FPS=30,LOOP=30, status=document.querySelector('#status');
+const W=1440,H=810,SUPERSAMPLE=2,N=900,FPS=30,LOOP=30, status=document.querySelector('#status');
 const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z), scene=new THREE.Scene();
 const renderer=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true,alpha:false});
-renderer.setSize(W,H);renderer.setPixelRatio(1);renderer.outputColorSpace=THREE.SRGBColorSpace;
+renderer.setSize(W,H);renderer.setPixelRatio(SUPERSAMPLE);renderer.outputColorSpace=THREE.SRGBColorSpace;
 renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.15;
 renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
-const filmCanvas=document.createElement('canvas');filmCanvas.width=W;filmCanvas.height=H;const film=filmCanvas.getContext('2d');document.querySelector('#scene').appendChild(filmCanvas);
+const filmCanvas=document.createElement('canvas');filmCanvas.width=W*SUPERSAMPLE;filmCanvas.height=H*SUPERSAMPLE;const film=filmCanvas.getContext('2d');film.scale(SUPERSAMPLE,SUPERSAMPLE);document.querySelector('#scene').appendChild(filmCanvas);
 const bg=document.createElement('canvas');bg.width=W;bg.height=H;
 const bc=bg.getContext('2d'),gradient=bc.createRadialGradient(760,460,40,800,490,890);
 gradient.addColorStop(0,'#23303d');gradient.addColorStop(.65,'#151f2b');gradient.addColorStop(1,'#0e151f');bc.fillStyle=gradient;bc.fillRect(0,0,W,H);
@@ -53,8 +53,8 @@ box(V(.20,2.00,-.37),[5.45,.14,2.47],m.dark,.07);
 box(V(.20,2.095,-.37),[5.53,.07,2.53],m.wood,.04);
 box(V(.20,2.125,.898),[5.35,.022,.022],amber,.005);
 // Two real display textures: an editor with syntax highlighting and a terminal.
-const codeCanvas=document.createElement('canvas');codeCanvas.width=1280;codeCanvas.height=800;
-const cc=codeCanvas.getContext('2d');
+const codeCanvas=document.createElement('canvas');codeCanvas.width=2560;codeCanvas.height=1600;
+const cc=codeCanvas.getContext('2d');cc.scale(2,2);
 const codeTexture=new THREE.CanvasTexture(codeCanvas);codeTexture.colorSpace=THREE.SRGBColorSpace;codeTexture.anisotropy=renderer.capabilities.getMaxAnisotropy();
 const codeLines=[
  [['type ','#c8a0ee'],['Developer','#f2d9a1'],[' = {','#d1ddeb']],
@@ -100,8 +100,8 @@ function monitor(x,y,z,width,height,texture){
  box(V(x,y-height/2-.065,z+.096),[.14,.012,.008],amber,.003);return screen;
 }
 monitor(.80,3.39,-1.08,3.30,2.065,codeTexture);
-const termCanvas=document.createElement('canvas');termCanvas.width=540;termCanvas.height=800;
-const tc=termCanvas.getContext('2d'),termTexture=new THREE.CanvasTexture(termCanvas);termTexture.colorSpace=THREE.SRGBColorSpace;
+const termCanvas=document.createElement('canvas');termCanvas.width=1080;termCanvas.height=1600;
+const tc=termCanvas.getContext('2d'),termTexture=new THREE.CanvasTexture(termCanvas);termTexture.colorSpace=THREE.SRGBColorSpace;termTexture.anisotropy=renderer.capabilities.getMaxAnisotropy();tc.scale(2,2);
 function terminal(t){
  const state=screenState(t);tc.fillStyle='#091317';tc.fillRect(0,0,540,800);
  if(state.wake<.001){tc.fillStyle='#253b3d';tc.beginPath();tc.arc(270,400,10,0,Math.PI*2);tc.fill();termTexture.needsUpdate=true;return;}
@@ -262,10 +262,10 @@ const chapters=[
 ];
 const originalWorld=scene.children.filter(o=>!o.isLight);
 function canvasLabel(text,width=1024,height=220,color='#c8e64c'){
- const c=document.createElement('canvas');c.width=width;c.height=height;const x=c.getContext('2d');
+ const c=document.createElement('canvas');c.width=width*2;c.height=height*2;const x=c.getContext('2d');x.scale(2,2);
  x.fillStyle='#16212e';x.beginPath();x.roundRect(2,2,width-4,height-4,40);x.fill();x.strokeStyle='#46566b';x.lineWidth=3;x.stroke();
  x.textAlign='center';x.textBaseline='middle';x.font='600 '+Math.min(height*.36,width/(text.length*.65))+'px Arial';x.fillStyle=color;x.fillText(text,width/2,height/2);
- const tx=new THREE.CanvasTexture(c);tx.colorSpace=THREE.SRGBColorSpace;return tx;
+ const tx=new THREE.CanvasTexture(c);tx.colorSpace=THREE.SRGBColorSpace;tx.anisotropy=renderer.capabilities.getMaxAnisotropy();return tx;
 }
 const algorithm=new THREE.Group();scene.add(algorithm);
 const blockMats=[],numberMeshes=[],arrayValues=[2,4,7,11,16,23,31];
@@ -343,11 +343,11 @@ function animate(t){
 }
 
 function tick(){if(!exporting&&playing){selectedTime=((performance.now()-start)/1000)%LOOP;animate(selectedTime);}requestAnimationFrame(tick);}
-animate(selectedTime);tick();status.textContent='Ready · 1440 × 810 · 30 fps · six-shot, 30-second film';
-const blob=()=>new Promise(resolve=>filmCanvas.toBlob(resolve,'image/jpeg',.95));
+animate(selectedTime);tick();status.textContent='Ready · 2× supersampling · lossless frame capture · HD export';
+const blob=()=>new Promise(resolve=>filmCanvas.toBlob(resolve,'image/png'));
 async function send(url,body){const response=await fetch(url,{method:'POST',body});if(!response.ok)throw new Error(await response.text());}
 document.querySelector('#time').oninput=e=>{playing=false;selectedTime=Number(e.target.value);animate(selectedTime);document.querySelector('#play').textContent='Play preview';status.textContent=selectedTime.toFixed(2)+' seconds';};
 document.querySelector('#play').onclick=()=>{playing=!playing;start=performance.now()-selectedTime*1000;document.querySelector('#play').textContent=playing?'Pause preview':'Play preview';};
 document.querySelector('#preview').onclick=async()=>{exporting=true;animate(selectedTime);await send('/preview',await blob());status.textContent='Still preview saved';exporting=false;};
-document.querySelector('#render').onclick=async()=>{exporting=true;document.querySelectorAll('button,input').forEach(b=>b.disabled=true);try{for(let i=Number(new URLSearchParams(location.search).get("start")||0);i<N;i++){animate(i/FPS);await send(`/frame/${String(i).padStart(3,'0')}`,await blob());status.textContent=`Rendering ${i+1} / ${N}`;}status.textContent='Assembling animation…';await send('/finish',new Uint8Array());status.textContent='Saved · six chapters · 30-second film';}catch(error){status.textContent=error.message;}finally{exporting=false;start=performance.now();document.querySelectorAll('button,input').forEach(b=>b.disabled=false);}};
+document.querySelector('#render').onclick=async()=>{exporting=true;document.querySelectorAll('button,input').forEach(b=>b.disabled=true);try{for(let i=0;i<N;i++){animate(i/FPS);await send(`/frame/${String(i).padStart(3,'0')}`,await blob());status.textContent=`Rendering ${i+1} / ${N}`;}status.textContent='Assembling animation…';await send('/finish',new Uint8Array());status.textContent='Saved · sharp HD film · 1440 × 810 · 30 fps';}catch(error){status.textContent=error.message;}finally{exporting=false;start=performance.now();document.querySelectorAll('button,input').forEach(b=>b.disabled=false);}};
 </script></body></html>
