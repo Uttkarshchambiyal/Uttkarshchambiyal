@@ -99,15 +99,21 @@ Passionate about building interactive web experiences, bringing code and creativ
 
 ---
 
-<!-- CODER-WORKSHOP:START -->
+<!-- PROFILE-FILM:START -->
+<h3 align="center">Behind the code</h3>
+<p align="center">A short story of how I design, build, solve, and keep learning.</p>
+
 <div align="center">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/coder-workshop-backprint.png" />
-    <source type="image/webp" srcset="assets/coder-workshop-backprint.webp" />
-    <img src="assets/coder-workshop-backprint.gif" alt="A 3D coder wearing a hoodie with black Uttkarsh Chambiyal lettering across the back walks in from the right, sits down, wakes the monitors, types visible code, celebrates a successful build, and walks away — a smooth 16-second animation with no buttons or controls" width="100%" />
-  </picture>
+  <a href="assets/uttkarsh-behind-the-code.mp4">
+    <picture>
+      <source media="(prefers-reduced-motion: reduce)" srcset="assets/uttkarsh-behind-the-code.png" />
+      <source type="image/webp" srcset="assets/uttkarsh-behind-the-code.webp" />
+      <img src="assets/uttkarsh-behind-the-code.png" alt="Behind the code — Uttkarsh Chambiyal's 30-second animated story: an introduction, UI/UX design, frontend coding, a 3D binary-search problem, learning Spring Boot and SwiftUI, and building something useful. Six camera angles with readable captions." width="100%" />
+    </picture>
+  </a>
 </div>
-<!-- CODER-WORKSHOP:END -->
+<p align="center"><a href="assets/uttkarsh-behind-the-code.mp4">Watch the full 30-second film</a></p>
+<!-- PROFILE-FILM:END -->
 
 <!-- GLASS-ENDING:START -->
 <div align="center">
