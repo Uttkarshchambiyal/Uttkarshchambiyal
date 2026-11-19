@@ -108,3 +108,13 @@ Passionate about building interactive web experiences, bringing code and creativ
   </picture>
 </div>
 <!-- CODER-WORKSHOP:END -->
+
+<!-- GLASS-ENDING:START -->
+<div align="center">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/glass-name-ending.png" />
+    <source type="image/webp" srcset="assets/glass-name-ending.webp" />
+    <img src="assets/glass-name-ending.gif" alt="Uttkarsh Chambiyal — a liquid-glass closing signature: the name appears, catches a soft highlight, then dissolves into the glass." width="100%" />
+  </picture>
+</div>
+<!-- GLASS-ENDING:END -->
