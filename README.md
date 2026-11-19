@@ -115,9 +115,9 @@ Passionate about building interactive web experiences, bringing code and creativ
 <!-- GLASS-ENDING:START -->
 <div align="center">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="assets/glass-script-signature.png" />
-    <source type="image/webp" srcset="assets/glass-script-signature.webp" />
-    <img src="assets/glass-script-signature.gif" alt="Uttkarsh Chambiyal — the original U logo appears in glass, then the full name is revealed in matching Brush Script lettering, catches a soft highlight, and fades away." width="100%" />
+    <source media="(prefers-reduced-motion: reduce)" srcset="assets/glass-apple-sequence.png" />
+    <source type="image/webp" srcset="assets/glass-apple-sequence.webp" />
+    <img src="assets/glass-apple-sequence.gif" alt="Uttkarsh Chambiyal — the U logo appears alone and fades out before the name appears in clean San Francisco typography, catches a glass highlight, and fades away." width="100%" />
   </picture>
 </div>
 <!-- GLASS-ENDING:END -->

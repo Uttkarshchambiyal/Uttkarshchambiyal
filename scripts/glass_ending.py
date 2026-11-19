@@ -31,7 +31,7 @@ def encode_webp(paths):
         if index % 100 == 0:
             print(f'Encoded {index}/{FRAMES} full-colour frames', flush=True)
     encoder.add(None, FRAMES * DURATION_MS, False, 84, 100, 0)
-    webp = ROOT / 'assets/glass-script-signature.webp'
+    webp = ROOT / 'assets/glass-apple-sequence.webp'
     webp.write_bytes(encoder.assemble('', '', ''))
     with Image.open(webp) as image:
         assert image.size == (WIDTH, HEIGHT) and 1 < image.n_frames <= FRAMES
@@ -53,24 +53,24 @@ def assemble(directory):
     for path in paths[::2]:
         with Image.open(path) as image:
             indexed.append(image.convert('RGB').quantize(palette=palette, dither=Image.Dither.NONE))
-    output = ROOT / 'assets/glass-script-signature.gif'
+    output = ROOT / 'assets/glass-apple-sequence.gif'
     indexed[0].save(output, save_all=True, append_images=indexed[1:],
                     duration=DURATION_MS * 2, loop=0, optimize=True, disposal=1)
     with Image.open(paths[245]) as image:
-        image.convert('RGB').save(ROOT / 'assets/glass-script-signature.png', optimize=True)
+        image.convert('RGB').save(ROOT / 'assets/glass-apple-sequence.png', optimize=True)
     with Image.open(output) as image:
         assert image.size == (WIDTH, HEIGHT)
         assert 1 < image.n_frames <= FRAMES // 2
         assert image.info['loop'] == 0
     print(f'Exported {WIDTH}x{HEIGHT}, {FRAMES} frames, 50 fps, '
-          f'9-second logo and script reveal, WebP {webp.stat().st_size:,} bytes, '
+          f'9-second sequential logo and Apple-type reveal, WebP {webp.stat().st_size:,} bytes, '
           f'GIF fallback {output.stat().st_size:,} bytes', flush=True)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port', type=int, default=8767)
-    parser.add_argument('--preview-output', type=Path, default=ROOT / 'assets/glass-script-signature.png')
+    parser.add_argument('--preview-output', type=Path, default=ROOT / 'assets/glass-apple-sequence.png')
     args = parser.parse_args()
     with tempfile.TemporaryDirectory(prefix='glass-ending-') as temporary:
         frames = Path(temporary)
@@ -79,7 +79,7 @@ def main():
             def do_GET(self):
                 if self.path.split('?')[0] == '/':
                     path = ROOT / 'scripts/glass_ending.html'
-                elif self.path.split('?')[0] in ('/assets/uttkarsh-monogram.png', '/assets/uttkarsh-signature.svg'):
+                elif self.path.split('?')[0] in ('/assets/uttkarsh-monogram.png', '/assets/uttkarsh-name-sf.svg'):
                     path = ROOT / self.path.split('?')[0].lstrip('/')
                 else:
                     self.send_error(404); return
